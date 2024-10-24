@@ -1,128 +1,693 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio">
-  <meta name="author" content="Your Name">
-  <title>My Portfolio</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">My Portfolio</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Profile" />
+    <meta name="author" content="Your Name" />
+    <title>Profile</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">tnakamura</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#career">Career</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#output">Output</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- Header -->
-  <header class="bg-primary text-white text-center" style="padding: 100px 0;">
-    <div class="container">
-      <h1>Welcome to My Portfolio</h1>
-      <p class="lead">A showcase of my work and skills</p>
-    </div>
-  </header>
+    <!-- Header -->
+    <header
+      class="bg-primary text-white text-center"
+      style="padding: 120px 0 64px"
+    >
+      <div class="custom-container">
+        <h1>Welcome to My Profile</h1>
+      </div>
+    </header>
 
-  <!-- About Section -->
-  <section id="about" class="py-5">
-    <div class="container">
-      <h2 class="text-center">About Me</h2>
-      <p class="lead text-center">I am a web developer with experience in creating dynamic and responsive websites.</p>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="custom-container">
+        <h2 class="text-center mb-5"><i class="fas fa-user"></i> About Me</h2>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center">Projects</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Project 1">
-            <div class="card-body">
-              <h5 class="card-title">Project 1</h5>
-              <p class="card-text">Description of project 1.</p>
+        <!-- 名前と自己紹介文 -->
+        <div class="text-center mb-4">
+          <!-- プロフィール画像 -->
+          <img
+            src="./ぼのぼの.png"
+            alt="プロフィール画像"
+            class="rounded-circle mb-3"
+            width="150"
+            height="150"
+          />
+          <h3>中村 匠 (Takumi Nakamura)</h3>
+          <div class="d-flex justify-content-center">
+            <p class="mr-4">
+              <i class="fas fa-calendar-alt"></i>
+              <strong>Born:</strong> 1992/05/01
+            </p>
+            <p>
+              <i class="fas fa-globe"></i> <strong>Location:</strong> Saitama,
+              Japan
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <p>閲覧いただきましてありがとうございます！</p>
+          <p>
+            現在はコードキャンプにて、SRE領域をテックリードとして一手に引き受けつつ、アプリケーションエンジニアとしてのアプリケーション開発や、情報システム部門の業務も担うなど何でも屋的な役割を担っています。
+          </p>
+          <!-- ステータスセクション -->
+          <div class="text-center my-4">
+            <h4 class="mb-3">
+              <i class="fas fa-info-circle"></i> 現在のステータス
+            </h4>
+            <div class="d-flex justify-content-center">
+              <div class="mr-4">
+                <p><i class="fas fa-briefcase"></i> <strong>転職:</strong></p>
+                <p>いいお話があれば</p>
+              </div>
+              <div>
+                <p>
+                  <i class="fas fa-business-time"></i> <strong>副業:</strong>
+                </p>
+                <p>募集中（月10h~20h程度）</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- やれることカード -->
+            <div class="col-md-12 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <i class="fas fa-tools"></i> やれること
+                  </h4>
+                  <ul>
+                    <li>
+                      パブリッククラウド（AWS）を用いたインフラ設計/構築/運用
+                    </li>
+                    <li>SRE領域全般</li>
+                    <li>アプリケーション開発（Rails/React）</li>
+                    <li>LP開発</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- 仕事で大事にしていることカード -->
+            <div class="col-md-12 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <i class="fas fa-heart"></i> 仕事で大事にしていること
+                  </h4>
+                  <ul>
+                    <li>手段を目的化しない</li>
+                    <li>
+                      アウトプットを出す（組織や顧客に価値提供する、評論家にならない）
+                    </li>
+                    <li>持続的に働く（無理をせず、無理をさせない）</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- 職歴概要カード -->
+            <div class="col-md-12 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <i class="fas fa-briefcase"></i> 職歴概要
+                  </h4>
+                  <p>
+                    2016年にフューチャー株式会社に新卒で入社。新人研修後に技術部隊のインフラチームに配属となり3年間で4つのプロジェクト（ヘルスケア、金融等）に従事。その後2019年にグループ会社のコードキャンプ株式会社に出向。Rails、Reactを用いたアプリケーション開発や、インフラレイヤのテックリードを務める。
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Project 2">
-            <div class="card-body">
-              <h5 class="card-title">Project 2</h5>
-              <p class="card-text">Description of project 2.</p>
-            </div>
+      </div>
+    </section>
+
+    <!-- スキルセクション -->
+    <section id="skills" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">
+          <i class="fas fa-laptop-code"></i> Skills
+        </h2>
+
+        <!-- レベルの説明 -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-6">
+            <h4><i class="fas fa-star"></i> レベルの説明</h4>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">レベル</th>
+                  <th scope="col">説明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>★★★★★</td>
+                  <td>
+                    複雑なタスクに加え、メンバーへの指導やプロジェクトのリードが可能
+                  </td>
+                </tr>
+                <tr>
+                  <td>★★★★☆</td>
+                  <td>
+                    複雑なタスクを独力でこなせるが、全体的なリードは難しい場合もある
+                  </td>
+                </tr>
+                <tr>
+                  <td>★★★☆☆</td>
+                  <td>
+                    基本的なタスクを問題なく処理できるが、複雑な課題にはサポートが必要
+                  </td>
+                </tr>
+                <tr>
+                  <td>★★☆☆☆</td>
+                  <td>
+                    実務での使用は限定的だが、学習や趣味の範囲では十分に活用可能
+                  </td>
+                </tr>
+                <tr>
+                  <td>★☆☆☆☆</td>
+                  <td>基本操作は理解しているが、応用にはさらなる学習が必要</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-        <div class="col-md-4">
+
+        <!-- グリッドレイアウトで2列に分ける -->
+        <div class="row">
+          <!-- 左側のカラム -->
+          <div class="col-md-6 mb-4">
+            <!-- プログラミング言語 -->
+            <p><strong>プログラミング言語:</strong></p>
+            <p>
+              どちらかというとサーバーサイド（Ruby/Rails）の方が好きでしたが、Reactも触る機会が増えてきました。
+              最近はOpenAI APIを用いたソースコードの添削機能を作成しました。
+            </p>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Type</th>
+                  <th scope="col">年数</th>
+                  <th scope="col">レベル</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ruby</td>
+                  <td>5年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>JavaScript</td>
+                  <td>3年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="far fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>HTML/CSS</td>
+                  <td>5年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>SQL</td>
+                  <td>5年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="far fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>GAS</td>
+                  <td>1年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="far fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- AWS -->
+            <p><strong>AWS:</strong></p>
+            <p>
+              EC2歴が長いですが、EC2 ->
+              Fargate移行を経験したのでコンテナ周りの知識もそれなりにつきました
+            </p>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">サービス</th>
+                  <th scope="col">年数</th>
+                  <th scope="col">レベル</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>EC2</td>
+                  <td>5年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>ECS（Fargate）</td>
+                  <td>1年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>S3</td>
+                  <td>5年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>RDS</td>
+                  <td>5年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>CloudFormation</td>
+                  <td>5年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>ElastiCache</td>
+                  <td>5年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="far fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>CloudFront</td>
+                  <td>5年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="far fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>AWS WAF</td>
+                  <td>3年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="far fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 右側のカラム -->
+          <div class="col-md-6 mb-4">
+            <!-- フレームワーク・ライブラリ -->
+            <p><strong>フレームワーク・ライブラリ:</strong></p>
+            <p>
+              各フレームワークで普通に開発する分には問題なく、Railsであれば品質改善やテスト導入など、踏み込んだ領域も対応可能です。
+            </p>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Type</th>
+                  <th scope="col">年数</th>
+                  <th scope="col">レベル</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>React</td>
+                  <td>3年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="far fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Ruby on Rails</td>
+                  <td>5年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- その他 -->
+            <p><strong>その他:</strong></p>
+            <p>
+              新たなツールを導入したい、というときは自分が検証、導入、運用することが多いです
+            </p>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Type</th>
+                  <th scope="col">年数</th>
+                  <th scope="col">レベル</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Git</td>
+                  <td>5年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Docker</td>
+                  <td>2年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Github Actions</td>
+                  <td>1年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>CircleCI</td>
+                  <td>5年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>MySQL</td>
+                  <td>4年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="far fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Rundeck</td>
+                  <td>3年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Embulk</td>
+                  <td>3年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="far fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Mackerel</td>
+                  <td>3年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Ansible</td>
+                  <td>1年</td>
+                  <td>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="far fa-star"></i
+                    ><i class="far fa-star"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- その他 -->
+            <p><strong>資格</strong></p>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">資格名</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>AWS認定ソリューションアーキテクト – アソシエイト</td>
+                </tr>
+                <tr>
+                  <td>日商簿記2級</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Section -->
+    <section id="career" class="py-5">
+      <div class="custom-container">
+        <h2 class="text-center mb-5">
+          <i class="fas fa-briefcase"></i> Career
+        </h2>
+        <div class="col-md-12">
+          <!-- コードキャンプ株式会社 -->
           <div class="card mb-4">
-            <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Project 3">
             <div class="card-body">
-              <h5 class="card-title">Project 3</h5>
-              <p class="card-text">Description of project 3.</p>
+              <h5 class="card-title">コードキャンプ株式会社</h5>
+              <p class="card-text">
+                <strong>Position:</strong> SRE Tech Lead / Application Engineer
+              </p>
+              <p class="card-text"><strong>Duration:</strong> 2019/09 - 現在</p>
+              <p class="card-text">
+                SRE領域をテックリードとして一手に引き受けつつ、アプリケーションエンジニアとしてのアプリケーション開発や、情報システム部門の業務も担うなど何でも屋的な役割を担っています
+              </p>
+            </div>
+          </div>
+
+          <!-- フューチャー株式会社 -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">フューチャー株式会社</h5>
+              <p class="card-text"><strong>Position:</strong> Infra Engineer</p>
+              <p class="card-text">
+                <strong>Duration:</strong> 2016/09 - 2019/09
+              </p>
+              <p class="card-text">
+                新卒入社後技術部隊のインフラチームに配属。ヘルスケア、金融などのプロジェクトに従事しました。
+              </p>
+            </div>
+          </div>
+
+          <!-- 学歴 -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">早稲田大学</h5>
+              <p class="card-text"><strong>学部:</strong> 社会科学部</p>
+              <p class="card-text">
+                <strong>Duration:</strong> 2011/04/01 - 2016/03/31
+              </p>
+              <p class="card-text">
+                ボート部のマネージャーとして、活動費調達やOBとの折衝を行いました。またボートの大会運営団体の幹部として、メンバーのマネジメントや大会に向けての計画策定、ボート協会との折衝などを行いました。
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-5">
-    <div class="container">
-      <h2 class="text-center">Contact Me</h2>
-      <p class="lead text-center">Feel free to reach out for any inquiries or collaborations.</p>
-      <div class="row">
-        <div class="col-md-6 mx-auto">
-          <form>
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Your Name">
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Your Email">
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-          </form>
+    <!-- Output Section -->
+    <section id="output" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">
+          <i class="fas fa-external-link-alt"></i> Output
+        </h2>
+        <div class="col-md-5 mx-auto">
+          <dl class="row">
+            <dt class="col-sm-6">
+              <i class="fab fa-github"></i> Github（個人用）:
+            </dt>
+            <dd class="col-sm-6">
+              <a href="https://github.com/byson2562" target="_blank"
+                >byson2562</a
+              >
+            </dd>
+
+            <dt class="col-sm-6">
+              <i class="fab fa-github"></i> Github（業務用）:
+            </dt>
+            <dd class="col-sm-6">
+              <a href="https://github.com/t-nakamura2562" target="_blank"
+                >t-nakamura2562</a
+              >
+            </dd>
+
+            <dt class="col-sm-6"><i class="fas fa-edit"></i> Qiita:</dt>
+            <dd class="col-sm-6">
+              <a href="https://qiita.com/bython" target="_blank">bython</a>
+            </dd>
+
+            <dt class="col-sm-6">
+              <i class="fas fa-newspaper"></i> Wantedly記事:
+            </dt>
+            <dd class="col-sm-6">
+              <a
+                href="https://www.wantedly.com/companies/codecamp/post_articles/451087"
+                target="_blank"
+              >
+                CodeCampの記事
+              </a>
+            </dd>
+          </dl>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="py-4 bg-dark text-white-50">
-    <div class="container text-center">
-      <small>Copyright &copy; Your Name</small>
-    </div>
-  </footer>
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+      <div class="custom-container">
+        <h2 class="text-center mb-5">
+          <i class="fas fa-envelope"></i> Contact Me
+        </h2>
+        <p class="lead text-center">お気軽にお問い合わせください</p>
+        <div class="text-center">
+          <p>
+            Email:
+            <a href="mailto:takumi.nakamura.by@gmail.com"
+              >takumi.nakamura.by@gmail.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white-50">
+      <div class="container text-center">
+        <small>Copyright &copy; Takumi Nakamura</small>
+      </div>
+    </footer>
 
-</body>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+      document.querySelectorAll("a.nav-link").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const target = document.querySelector(this.getAttribute("href"));
+          target.scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+
+    <!-- CSS for custom container width -->
+    <style>
+      .custom-container {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+    </style>
+  </body>
 </html>
