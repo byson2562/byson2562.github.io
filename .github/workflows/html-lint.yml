@@ -17,4 +17,4 @@ jobs:
         run: npm install -g html-validate
 
       - name: Run html-validate
-        run: html-validate .
+        run: html-validate --config htmlvalidate.json .
