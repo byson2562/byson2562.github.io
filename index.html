@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
-    <!-- Google tag (gtag.js) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-C8BYVLEQ0X"
@@ -12,701 +11,815 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-C8BYVLEQ0X");
     </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Profile" />
-    <meta name="author" content="Your Name" />
-    <title>Profile</title>
-    <!-- Bootstrap CSS -->
+    <meta
+      name="description"
+      content="中村匠のポートフォリオ。SRE・アプリ開発・技術リードとしての実績、スキル、経歴を掲載。"
+    />
+    <meta name="author" content="Takumi Nakamura" />
+
+    <meta property="og:title" content="Takumi Nakamura | Portfolio" />
+    <meta
+      property="og:description"
+      content="SRE / Application Engineer。改善と実装を一気通貫で進めるエンジニアのポートフォリオ。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./bonobono.png" />
+
+    <title>Takumi Nakamura | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
       rel="stylesheet"
     />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <!-- CSS for custom container width -->
+
     <style>
-      .custom-container {
-        max-width: 960px;
+      :root {
+        --bg: #f7f4ec;
+        --surface: #fffcf6;
+        --surface-strong: #fff9ec;
+        --text: #1f2833;
+        --muted: #4f5f73;
+        --line: #d8cfbe;
+        --accent: #1c6e8c;
+        --accent-2: #d26a29;
+        --shadow: 0 14px 42px rgba(24, 35, 46, 0.12);
+        --radius: 18px;
+        --max: 1080px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        font-family:
+          "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+        line-height: 1.75;
+        background:
+          radial-gradient(
+            circle at 12% 12%,
+            rgba(28, 110, 140, 0.14),
+            transparent 35%
+          ),
+          radial-gradient(
+            circle at 84% 0%,
+            rgba(210, 106, 41, 0.12),
+            transparent 40%
+          ),
+          var(--bg);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .container {
+        width: min(var(--max), 92vw);
         margin: 0 auto;
+      }
+
+      .section {
+        padding: 84px 0;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(216, 207, 190, 0.7);
+        background: rgba(247, 244, 236, 0.82);
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 72px;
+      }
+
+      .logo {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 18px;
+        font-size: 0.92rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--muted);
+      }
+
+      .hero {
+        padding: 72px 0 40px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: 26px;
+      }
+
+      .panel {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-main {
+        padding: 40px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-main::after {
+        content: "";
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        right: -80px;
+        bottom: -90px;
+        border-radius: 50%;
+        background: rgba(28, 110, 140, 0.09);
+      }
+
+      .eyebrow {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 700;
+        font-size: 0.82rem;
+        letter-spacing: 0.1em;
+        color: var(--accent);
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        line-height: 1.3;
+      }
+
+      h1 {
+        margin-top: 10px;
+        font-size: clamp(1.8rem, 4vw, 2.95rem);
+      }
+
+      .lead {
+        color: var(--muted);
+        max-width: 62ch;
+        margin: 20px 0 0;
+      }
+
+      .cta {
+        margin-top: 28px;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        border: 1px solid var(--text);
+        text-decoration: none;
+        border-radius: 999px;
+        padding: 10px 18px;
+        font-size: 0.92rem;
+        font-weight: 700;
+        transition:
+          transform 0.2s ease,
+          background-color 0.2s ease,
+          color 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #fff;
+      }
+
+      .btn-secondary {
+        color: var(--text);
+        background: transparent;
+      }
+
+      .hero-side {
+        padding: 24px;
+        display: grid;
+        gap: 16px;
+        align-content: start;
+      }
+
+      .avatar {
+        width: 112px;
+        height: 112px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--line);
+      }
+
+      .meta-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .chip {
+        font-size: 0.8rem;
+        color: #fff;
+        background: linear-gradient(135deg, var(--accent), #2d8fb1);
+        border-radius: 999px;
+        padding: 5px 11px;
+      }
+
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 16px;
+        margin-bottom: 26px;
+      }
+
+      .section-title {
+        font-size: clamp(1.4rem, 3.2vw, 2rem);
+      }
+
+      .section-note {
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 20px;
+      }
+
+      .card h3 {
+        font-size: 1.1rem;
+      }
+
+      .card p,
+      .card li {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .card ul {
+        margin: 12px 0 0;
+        padding-left: 1.1rem;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 14px;
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 130px 1fr;
+        gap: 16px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 18px;
+      }
+
+      .time {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 0.86rem;
+        font-weight: 700;
+        color: var(--accent-2);
+      }
+
+      .role {
+        font-size: 1.02rem;
+        font-weight: 700;
+      }
+
+      .skill-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .skill-item {
+        background: var(--surface-strong);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 14px;
+      }
+
+      .skill-top {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.92rem;
+      }
+
+      .bar {
+        margin-top: 8px;
+        width: 100%;
+        height: 8px;
+        border-radius: 999px;
+        background: #e8ddc9;
+      }
+
+      .fill {
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      }
+
+      .links {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .link-item {
+        text-decoration: none;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 16px;
+        transition: transform 0.2s ease;
+      }
+
+      .link-item:hover {
+        transform: translateY(-3px);
+      }
+
+      .contact {
+        text-align: center;
+      }
+
+      .contact .panel {
+        padding: 28px;
+      }
+
+      .footer {
+        padding: 24px 0 40px;
+        color: var(--muted);
+        text-align: center;
+        font-size: 0.9rem;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(12px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 980px) {
+        .hero-grid,
+        .grid-3,
+        .skill-grid,
+        .links {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding-top: 48px;
+        }
+
+        .hero-main,
+        .hero-side {
+          padding: 24px;
+        }
+
+        .timeline-item {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .header-inner {
+          flex-direction: column;
+          justify-content: center;
+          gap: 8px;
+          padding: 10px 0;
+          min-height: auto;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+          justify-content: center;
+          font-size: 0.82rem;
+          gap: 10px;
+        }
+
+        .section {
+          padding: 64px 0;
+        }
       }
     </style>
   </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">tnakamura</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#career">Career</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#output">Output</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
 
-    <!-- Header -->
-    <header
-      class="bg-primary text-white text-center"
-      style="padding: 120px 0 64px"
-    >
-      <div class="custom-container">
-        <h1>Welcome to My Profile</h1>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">TAKUMI NAKAMURA</div>
+        <nav class="nav-links" aria-label="グローバルナビゲーション">
+          <a href="#value">Value</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#career">Career</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="py-5">
-      <div class="custom-container">
-        <h2 class="text-center mb-5"><i class="fas fa-user"></i> About Me</h2>
-
-        <!-- 名前と自己紹介文 -->
-        <div class="text-center mb-4">
-          <!-- プロフィール画像 -->
-          <img
-            src="./bonobono.png"
-            alt="プロフィール画像"
-            class="rounded-circle mb-3"
-            width="150"
-            height="150"
-          />
-          <h3>中村 匠 (Takumi Nakamura)</h3>
-          <div class="d-flex justify-content-center">
-            <p class="mr-4">
-              <i class="fas fa-calendar-alt"></i>
-              <strong>Born:</strong> 1992/05/01
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="panel hero-main reveal">
+            <p class="eyebrow">Portfolio</p>
+            <h1>
+              SREとアプリ開発を横断し、<br />
+              事業成果まで設計するエンジニア
+            </h1>
+            <p class="lead">
+              中村匠です。インフラの信頼性向上からアプリ実装、運用自動化までを一気通貫で担当しています。個人開発サービス「RowingAPI」の開発・運営も継続しており、単発の改善ではなく、価値提供を続けられる仕組み化を重視しています。
             </p>
-            <p>
-              <i class="fas fa-globe"></i> <strong>Location:</strong> Saitama,
-              Japan
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <p>閲覧いただきましてありがとうございます！</p>
-          <p>
-            現在はコードキャンプにて、SRE領域をテックリードとして一手に引き受けつつ、アプリケーションエンジニアとしてのアプリケーション開発や、情報システム部門の業務も担うなど何でも屋的な役割を担っています。
-          </p>
-          <!-- ステータスセクション -->
-          <div class="text-center my-4">
-            <h4 class="mb-3">
-              <i class="fas fa-info-circle"></i> 現在のステータス
-            </h4>
-            <div class="d-flex justify-content-center">
-              <div class="mr-4">
-                <p><i class="fas fa-briefcase"></i> <strong>転職:</strong></p>
-                <p>いいお話があれば</p>
-              </div>
-              <div>
-                <p>
-                  <i class="fas fa-business-time"></i> <strong>副業:</strong>
-                </p>
-                <p>募集中（月10h~20h程度）</p>
-              </div>
+            <div class="cta">
+              <a class="btn btn-primary" href="#contact">連絡する</a>
+              <a class="btn btn-secondary" href="#projects">実績を見る</a>
             </div>
           </div>
 
-          <div class="row">
-            <!-- やれることカード -->
-            <div class="col-md-12 mb-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <i class="fas fa-tools"></i> やれること
-                  </h4>
-                  <ul>
-                    <li>
-                      パブリッククラウド（AWS）を用いたインフラ設計/構築/運用
-                    </li>
-                    <li>SRE領域全般</li>
-                    <li>アプリケーション開発（Rails/React）</li>
-                    <li>LP開発</li>
-                  </ul>
-                </div>
-              </div>
+          <aside class="panel hero-side reveal">
+            <img
+              src="./bonobono.png"
+              alt="中村匠のプロフィール画像"
+              class="avatar"
+            />
+            <ul class="meta-list">
+              <li><strong>住まい:</strong> 埼玉</li>
+              <li>
+                <strong>職種:</strong> SRE Tech Lead / Application Engineer
+              </li>
+              <li><strong>関心:</strong> 信頼性、開発体験、テスト戦略</li>
+            </ul>
+            <div class="chips">
+              <span class="chip">AWS</span>
+              <span class="chip">Ruby on Rails</span>
+              <span class="chip">React</span>
+              <span class="chip">GitHub Actions</span>
+              <span class="chip">n8n / Dify</span>
             </div>
-
-            <!-- 仕事で大事にしていることカード -->
-            <div class="col-md-12 mb-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <i class="fas fa-heart"></i> 仕事で大事にしていること
-                  </h4>
-                  <ul>
-                    <li>手段を目的化しない</li>
-                    <li>
-                      アウトプットを出す（組織や顧客に価値提供する、評論家にならない）
-                    </li>
-                    <li>持続的に働く（無理をせず、無理をさせない）</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- 職歴概要カード -->
-            <div class="col-md-12 mb-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <i class="fas fa-briefcase"></i> 職歴概要
-                  </h4>
-                  <p>
-                    2016年にフューチャー株式会社に新卒で入社。新人研修後に技術部隊のインフラチームに配属となり3年間で4つのプロジェクト（ヘルスケア、金融等）に従事。その後2019年にグループ会社のコードキャンプ株式会社に出向。Rails、Reactを用いたアプリケーション開発や、インフラレイヤのテックリードを務める。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          </aside>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- スキルセクション -->
-    <section id="skills" class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-5">
-          <i class="fas fa-laptop-code"></i> Skills
-        </h2>
-
-        <!-- レベルの説明 -->
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-6">
-            <h4><i class="fas fa-star"></i> レベルの説明</h4>
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th scope="col">レベル</th>
-                  <th scope="col">説明</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>★★★★★</td>
-                  <td>
-                    複雑なタスクに加え、メンバーへの指導やプロジェクトのリードが可能
-                  </td>
-                </tr>
-                <tr>
-                  <td>★★★★☆</td>
-                  <td>
-                    複雑なタスクを独力でこなせるが、全体的なリードは難しい場合もある
-                  </td>
-                </tr>
-                <tr>
-                  <td>★★★☆☆</td>
-                  <td>
-                    基本的なタスクを問題なく処理できるが、複雑な課題にはサポートが必要
-                  </td>
-                </tr>
-                <tr>
-                  <td>★★☆☆☆</td>
-                  <td>
-                    実務での使用は限定的だが、学習や趣味の範囲では十分に活用可能
-                  </td>
-                </tr>
-                <tr>
-                  <td>★☆☆☆☆</td>
-                  <td>基本操作は理解しているが、応用にはさらなる学習が必要</td>
-                </tr>
-              </tbody>
-            </table>
+      <section id="value" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 class="section-title">提供できる価値</h2>
+            <p class="section-note">
+              方針だけで終わらせず、実装まで責任を持って前進させます。
+            </p>
           </div>
-        </div>
-
-        <!-- グリッドレイアウトで2列に分ける -->
-        <div class="row">
-          <!-- 左側のカラム -->
-          <div class="col-md-6 mb-4">
-            <!-- プログラミング言語 -->
-            <p><strong>プログラミング言語:</strong></p>
-            <p>
-              どちらかというとサーバーサイド（Ruby/Rails）の方が好きでしたが、Reactも触る機会が増えてきたので深掘りしたい気持ちです。
-            </p>
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th scope="col">Type</th>
-                  <th scope="col">年数</th>
-                  <th scope="col">レベル</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Ruby</td>
-                  <td>5年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="far fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>JavaScript</td>
-                  <td>3年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="far fa-star"></i
-                    ><i class="far fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>HTML/CSS</td>
-                  <td>5年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>SQL</td>
-                  <td>5年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="far fa-star"></i
-                    ><i class="far fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>GAS</td>
-                  <td>1年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="far fa-star"></i
-                    ><i class="far fa-star"></i>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-            <!-- AWS -->
-            <p><strong>AWS:</strong></p>
-            <p>
-              EC2歴が長いですが、EC2 ->
-              Fargate移行を経験したのでコンテナ周りの知識もそれなりにつきました
-            </p>
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th scope="col">サービス</th>
-                  <th scope="col">年数</th>
-                  <th scope="col">レベル</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>EC2</td>
-                  <td>5年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>ECS（Fargate）</td>
-                  <td>1年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>S3</td>
-                  <td>5年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>RDS</td>
-                  <td>5年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="far fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>CloudFormation</td>
-                  <td>5年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>ElastiCache</td>
-                  <td>5年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="far fa-star"></i
-                    ><i class="far fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>CloudFront</td>
-                  <td>5年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="far fa-star"></i
-                    ><i class="far fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>AWS WAF</td>
-                  <td>3年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="far fa-star"></i
-                    ><i class="far fa-star"></i>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- 右側のカラム -->
-          <div class="col-md-6 mb-4">
-            <!-- フレームワーク・ライブラリ -->
-            <p><strong>フレームワーク・ライブラリ:</strong></p>
-            <p>
-              各フレームワークで普通に開発する分には問題なく、Railsであれば品質改善やテスト導入など、踏み込んだ領域も対応可能です。
-            </p>
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th scope="col">Type</th>
-                  <th scope="col">年数</th>
-                  <th scope="col">レベル</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>React</td>
-                  <td>3年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="far fa-star"></i
-                    ><i class="far fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Ruby on Rails</td>
-                  <td>5年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="far fa-star"></i>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-            <!-- その他 -->
-            <p><strong>その他:</strong></p>
-            <p>
-              新たなツールを導入したい、というときは自分が検証、導入、運用することが多いです
-            </p>
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th scope="col">Type</th>
-                  <th scope="col">年数</th>
-                  <th scope="col">レベル</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Git</td>
-                  <td>5年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Docker</td>
-                  <td>2年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Github Actions</td>
-                  <td>1年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="far fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>CircleCI</td>
-                  <td>5年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="far fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>MySQL</td>
-                  <td>4年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="far fa-star"></i
-                    ><i class="far fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Rundeck</td>
-                  <td>3年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="far fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Embulk</td>
-                  <td>3年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="far fa-star"></i
-                    ><i class="far fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Mackerel</td>
-                  <td>3年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="far fa-star"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Ansible</td>
-                  <td>1年</td>
-                  <td>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i
-                    ><i class="fas fa-star"></i><i class="far fa-star"></i
-                    ><i class="far fa-star"></i>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-            <!-- その他 -->
-            <p><strong>資格</strong></p>
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th scope="col">資格名</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>AWS認定ソリューションアーキテクト – アソシエイト</td>
-                </tr>
-                <tr>
-                  <td>日商簿記2級</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Career Section -->
-    <section id="career" class="py-5">
-      <div class="custom-container">
-        <h2 class="text-center mb-5">
-          <i class="fas fa-briefcase"></i> Career
-        </h2>
-        <div class="col-md-12">
-          <!-- コードキャンプ株式会社 -->
-          <div class="card mb-4">
-            <div class="card-body">
-              <h5 class="card-title">コードキャンプ株式会社</h5>
-              <p class="card-text">
-                <strong>Position:</strong> SRE Tech Lead / Application Engineer
+          <div class="grid-3">
+            <article class="card reveal">
+              <h3>1. 信頼性の底上げ</h3>
+              <p>
+                監視、障害対応、キャパシティ設計を見据えたアーキテクチャ設計と最適化を進めます。
               </p>
-              <p class="card-text"><strong>Duration:</strong> 2019/09 - 現在</p>
-              <p class="card-text">
-                SRE領域をテックリードとして一手に引き受けつつ、アプリケーションエンジニアとしてのアプリケーション開発や、情報システム部門の業務も担うなど何でも屋的な役割を担っています
-              </p>
-
-              <h6><strong>直近のお仕事:</strong></h6>
               <ul>
-                <li>EC2 -> Fargateへのリプレイス</li>
-                <li>CircleCI -> Github Actions移行</li>
-                <li>E2Eテスト（System Spec）の導入</li>
-                <li>ChatGPTを用いたソースコード添削機能の開発</li>
+                <li>サービス特性に合わせた構成設計</li>
+                <li>障害対応と再発防止</li>
+                <li>運用負荷とコストを考慮した最適化</li>
               </ul>
-            </div>
+            </article>
+            <article class="card reveal">
+              <h3>2. 開発速度の向上</h3>
+              <p>
+                CI/CD、テスト、レビュー導線を整理し、チームが速く安全にリリースできる状態を作ります。
+              </p>
+              <ul>
+                <li>パイプラインの最適化</li>
+                <li>テスト設計の改善</li>
+                <li>リリース手順の標準化</li>
+              </ul>
+            </article>
+            <article class="card reveal">
+              <h3>3. 事業と技術の接続</h3>
+              <p>
+                技術施策をKPIや顧客価値に接続し、優先順位のズレを減らす意思決定を支援します。
+              </p>
+              <ul>
+                <li>目的から逆算した技術選定</li>
+                <li>事業優先度に沿った要件整理</li>
+                <li>継続運用を前提にした仕組み化</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 class="section-title">主な実績</h2>
+            <p class="section-note">
+              技術導入だけでなく、運用定着まで含めて推進した取り組みです。
+            </p>
           </div>
 
-          <!-- フューチャー株式会社 -->
-          <div class="card mb-4">
-            <div class="card-body">
-              <h5 class="card-title">フューチャー株式会社</h5>
-              <p class="card-text"><strong>Position:</strong> Infra Engineer</p>
-              <p class="card-text">
-                <strong>Duration:</strong> 2016/09 - 2019/09
-              </p>
-              <p class="card-text">
-                新卒入社後技術部隊のインフラチームに配属。ヘルスケア、金融などのプロジェクトに従事しました。
-              </p>
-            </div>
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="time">Own Product</div>
+              <div>
+                <h3 class="role">RowingAPI（rowing-api.com）の開発・運営</h3>
+                <p>
+                  設計・実装・運用を一貫して担当。データ整備、API提供、運用改善を継続しながら、利用者にとって使いやすいサービス体験を磨き込み。
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="time">Infrastructure</div>
+              <div>
+                <h3 class="role">EC2中心の構成をECS Fargateへ段階移行</h3>
+                <p>
+                  デプロイ・監視・ロールバック手順を再設計し、運用負荷と障害時の復旧時間を削減。移行期間中のサービス影響を抑えながら安定運用に着地。
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="time">DevEx</div>
+              <div>
+                <h3 class="role">CIをCircleCIからGitHub Actionsへ移行</h3>
+                <p>
+                  既存ジョブを棚卸しし、並列化とキャッシュ方針を見直し。開発フローに馴染む形で標準化し、変更追従しやすいCI基盤へ改善。
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="time">Quality</div>
+              <div>
+                <h3 class="role">
+                  E2E/System Spec導入と品質改善サイクルの構築
+                </h3>
+                <p>
+                  重要機能を中心に回帰テストを整備し、障害の早期検知を強化。テスト資産をチーム内で継続的に拡張できる運用ルールを設計。
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="time">Product</div>
+              <div>
+                <h3 class="role">生成AIを活用したソースコード添削機能を開発</h3>
+                <p>
+                  要件整理から実装・評価まで担当し、学習者向けのフィードバック体験を向上。プロダクト価値に直結する機能として運用へ接続。
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="time">Workflow</div>
+              <div>
+                <h3 class="role">n8n + Dify によるワークフロー環境の構築・運用</h3>
+                <p>
+                  現職で、業務要件に合わせたワークフロー設計、運用フロー整備、継続改善を担当。実運用を前提に、使い続けられる自動化基盤を整備。
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 class="section-title">スキルセット</h2>
+            <p class="section-note">
+              実務での活用度をベースに、現在の強みを整理しています。
+            </p>
           </div>
 
-          <!-- 学歴 -->
-          <div class="card mb-4">
-            <div class="card-body">
-              <h5 class="card-title">早稲田大学</h5>
-              <p class="card-text"><strong>学部:</strong> 社会科学部</p>
-              <p class="card-text">
-                <strong>Duration:</strong> 2011/04/01 - 2016/03/31
-              </p>
-              <p class="card-text">
-                ボート部のマネージャーとして、活動費調達やOBとの折衝を行いました。またボートの大会運営団体の幹部として、メンバーのマネジメントや大会に向けての計画策定、ボート協会との折衝などを行いました。
-              </p>
+          <div class="skill-grid">
+            <div class="skill-item reveal">
+              <div class="skill-top">
+                <strong>AWS / Cloud</strong><span>Advanced</span>
+              </div>
+              <div class="bar"><div class="fill" style="width: 92%"></div></div>
+            </div>
+            <div class="skill-item reveal">
+              <div class="skill-top">
+                <strong>Ruby on Rails</strong><span>Advanced</span>
+              </div>
+              <div class="bar"><div class="fill" style="width: 88%"></div></div>
+            </div>
+            <div class="skill-item reveal">
+              <div class="skill-top">
+                <strong>React / Frontend</strong><span>Intermediate+</span>
+              </div>
+              <div class="bar"><div class="fill" style="width: 73%"></div></div>
+            </div>
+            <div class="skill-item reveal">
+              <div class="skill-top">
+                <strong>CI/CD Design</strong><span>Advanced</span>
+              </div>
+              <div class="bar"><div class="fill" style="width: 87%"></div></div>
+            </div>
+            <div class="skill-item reveal">
+              <div class="skill-top">
+                <strong>Database / SQL</strong><span>Intermediate+</span>
+              </div>
+              <div class="bar"><div class="fill" style="width: 71%"></div></div>
+            </div>
+            <div class="skill-item reveal">
+              <div class="skill-top">
+                <strong>Observability</strong><span>Advanced</span>
+              </div>
+              <div class="bar"><div class="fill" style="width: 84%"></div></div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Output Section -->
-    <section id="output" class="py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center mb-5">
-          <i class="fas fa-external-link-alt"></i> Output
-        </h2>
-        <div class="col-md-5 mx-auto">
-          <dl class="row">
-            <dt class="col-sm-6">
-              <i class="fab fa-github"></i> Github（個人用）:
-            </dt>
-            <dd class="col-sm-6">
-              <a href="https://github.com/byson2562" target="_blank"
-                >byson2562</a
-              >
-            </dd>
+      <section id="career" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 class="section-title">経歴</h2>
+            <p class="section-note">
+              インフラ起点でキャリアを開始し、アプリケーション領域まで拡張してきました。
+            </p>
+          </div>
 
-            <dt class="col-sm-6">
-              <i class="fab fa-github"></i> Github（業務用）:
-            </dt>
-            <dd class="col-sm-6">
-              <a href="https://github.com/t-nakamura2562" target="_blank"
-                >t-nakamura2562</a
-              >
-            </dd>
-
-            <dt class="col-sm-6"><i class="fas fa-edit"></i> Qiita:</dt>
-            <dd class="col-sm-6">
-              <a href="https://qiita.com/bython" target="_blank">bython</a>
-            </dd>
-
-            <dt class="col-sm-6">
-              <i class="fas fa-newspaper"></i> Wantedly記事:
-            </dt>
-            <dd class="col-sm-6">
-              <a
-                href="https://www.wantedly.com/companies/codecamp/post_articles/451087"
-                target="_blank"
-              >
-                CodeCampの記事
-              </a>
-            </dd>
-          </dl>
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="time">2019.09 - Present</div>
+              <div>
+                <h3 class="role">コードキャンプ株式会社</h3>
+                <p>
+                  SRE Tech Lead / Application
+                  Engineer。信頼性向上とアプリ開発を横断し、技術面の推進役として改善サイクルを設計・実行。
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="time">2016.09 - 2019.09</div>
+              <div>
+                <h3 class="role">フューチャー株式会社</h3>
+                <p>
+                  Infra
+                  Engineer。ヘルスケア・金融領域の案件で、基盤構築と運用改善を担当。実務での設計・運用の基礎を形成。
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="time">2011.04 - 2016.03</div>
+              <div>
+                <h3 class="role">早稲田大学 社会科学部</h3>
+                <p>
+                  在学中は組織運営や対外折衝を経験。調整力と実行力の土台となる経験を積む。
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-      <div class="custom-container">
-        <h2 class="text-center mb-5">
-          <i class="fas fa-envelope"></i> Contact Me
-        </h2>
-        <p class="lead text-center">お気軽にお問い合わせください</p>
-        <div class="text-center">
-          <p>
-            Email:
-            <a href="mailto:takumi.nakamura.by@gmail.com"
-              >takumi.nakamura.by@gmail.com</a
+      <section class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2 class="section-title">発信・リンク</h2>
+            <p class="section-note">
+              開発・技術に関するアウトプットと活動先です。
+            </p>
+          </div>
+
+          <div class="links">
+            <a
+              class="link-item reveal"
+              href="https://rowing-api.com/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-          </p>
+              <strong>RowingAPI</strong><br />開発・運営中のサービス
+            </a>
+            <a
+              class="link-item reveal"
+              href="https://github.com/byson2562"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>GitHub（個人）</strong><br />byson2562
+            </a>
+            <a
+              class="link-item reveal"
+              href="https://github.com/t-nakamura2562"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>GitHub（業務）</strong><br />t-nakamura2562
+            </a>
+            <a
+              class="link-item reveal"
+              href="https://qiita.com/bython"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>Qiita</strong><br />技術メモ・知見共有
+            </a>
+            <a
+              class="link-item reveal"
+              href="https://www.wantedly.com/companies/codecamp/post_articles/451087"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>Interview</strong><br />CodeCamp記事
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Footer -->
-    <footer class="py-4 bg-dark text-white-50">
-      <div class="container text-center">
-        <small>Copyright &copy; Takumi Nakamura</small>
-      </div>
+      <section id="contact" class="section contact">
+        <div class="container">
+          <div class="panel reveal">
+            <p class="eyebrow">Contact</p>
+            <h2 class="section-title">採用・副業のご相談</h2>
+            <p class="lead" style="margin: 12px auto 0; max-width: 50ch">
+              業務改善、SRE立ち上げ、Webアプリ開発などのご相談はメールでご連絡ください。
+            </p>
+            <div class="cta" style="justify-content: center">
+              <a
+                class="btn btn-primary"
+                href="mailto:takumi.nakamura.by@gmail.com"
+                >takumi.nakamura.by@gmail.com</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">Copyright &copy; Takumi Nakamura</div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Smooth Scroll Script -->
     <script>
-      document.querySelectorAll("a.nav-link").forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-
-          const target = document.querySelector(this.getAttribute("href"));
-          target.scrollIntoView({
-            behavior: "smooth",
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
           });
-        });
+        },
+        { threshold: 0.15 },
+      );
+
+      document.querySelectorAll(".reveal").forEach((element) => {
+        observer.observe(element);
       });
     </script>
   </body>
