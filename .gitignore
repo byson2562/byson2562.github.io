@@ -1,0 +1,5 @@
+node_modules/
+portfolio.pdf
+package.json
+package-lock.json
+build-pdf.mjs
