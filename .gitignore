@@ -1,5 +1,7 @@
 node_modules/
 portfolio.pdf
+career.pdf
+career.html
 package.json
 package-lock.json
 build-pdf.mjs
