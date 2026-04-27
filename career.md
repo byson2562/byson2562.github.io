@@ -259,7 +259,7 @@
 | CI/CD           | GitHub Actions、CircleCI、Jenkins                                  | 中級以上 | 約7年          |
 | 可観測性        | CloudWatch、Mackerel                                               | 中級以上 | 約7年          |
 | テスト          | RSpec（Unit / Integration / System）                               | 上級     | 約3年          |
-| AI ワークフロー | OpenAI API、n8n、Dify                                              | 中級以上 | 約1年          |
+| AI ワークフロー | OpenAI API、n8n、Dify                                              | 中級     | 約1年          |
 | OS / 基盤       | Linux（Amazon Linux / Ubuntu）                                     | 上級     | 約9年          |
 | バージョン管理  | Git / GitHub                                                       | 上級     | 約7年          |
 
