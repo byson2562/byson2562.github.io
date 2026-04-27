@@ -1,29 +1,29 @@
 ---
 name: sync-portfolio
-description: career.md を編集した後、index.html（ポートフォリオサイト）の内容を career.md に同期する。career.md のスキルセット・自己定義・強みに変更があったときに自動で呼び出す。
+description: 職務経歴書.md を編集した後、index.html（ポートフォリオサイト）の内容を 職務経歴書.md に同期する。職務経歴書.md のスキルセット・自己定義・強みに変更があったときに自動で呼び出す。
 allowed-tools: Read, Edit
 ---
 
-career.md の現在の内容を読み、index.html との差分を確認して以下の項目を自動更新してください。
+職務経歴書.md の現在の内容を読み、index.html との差分を確認して以下の項目を自動更新してください。
 
 ## 同期項目
 
 ### 1. スキルセット（`.skill-item`）
 
-`career.md` の `## スキルセット` テーブルと `index.html` の `.skill-item` を照合。
+`職務経歴書.md` の `## スキルセット` テーブルと `index.html` の `.skill-item` を照合。
 
 習熟度 → ポートフォリオ表示の対応：
 
-| career.md 習熟度 | index.html ラベル | バー幅 |
+| 職務経歴書.md 習熟度 | index.html ラベル | バー幅 |
 |---|---|---|
 | 上級 | Advanced | 85〜92% |
 | 中級以上 | Intermediate+ | 70〜77% |
 | 中級 | Intermediate | 63〜70% |
 
 確認事項：
-- 習熟度ラベルが career.md と一致しているか
+- 習熟度ラベルが 職務経歴書.md と一致しているか
 - バー幅が対応表の範囲内か
-- career.md に追加されたスキルが抜けていないか
+- 職務経歴書.md に追加されたスキルが抜けていないか
 
 ### 2. 自己定義・強み（Hero セクション）
 
