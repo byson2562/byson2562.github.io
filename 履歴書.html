@@ -2,397 +2,390 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>履歴書 — 中村 匠</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
     <style>
-      @page {
-        size: A4;
-        margin: 0;
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+      @page { size: A4; margin: 14mm 16mm; }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
 
       body {
-        font-family:
-          "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
-        font-size: 9pt;
-        line-height: 1.5;
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+        font-size: 8.5pt;
         color: #111;
         background: #fff;
-        padding: 12mm 14mm;
       }
 
-      @media print {
-        body { padding: 0; }
-      }
-
-      /* ======= タイトル ======= */
-      .doc-title {
-        text-align: center;
-        font-size: 18pt;
-        font-weight: 700;
-        letter-spacing: 0.4em;
-        margin-bottom: 4mm;
-      }
-
-      .doc-date {
-        text-align: right;
-        font-size: 8.5pt;
-        margin-bottom: 3mm;
-        color: #333;
-      }
-
-      /* ======= 汎用テーブル ======= */
       table {
         width: 100%;
         border-collapse: collapse;
-        font-size: 9pt;
       }
-
-      td, th {
-        border: 1px solid #555;
-        padding: 2mm 2.5mm;
+      td {
+        border: 1px solid #666;
+        padding: 1.5mm 2.5mm;
         vertical-align: middle;
+        font-size: 8.5pt;
+        line-height: 1.4;
       }
-
-      .label {
-        background: #f4f4f4;
+      .lbl {
+        background: #efefef;
         font-weight: 700;
-        white-space: nowrap;
         text-align: center;
-        font-size: 8pt;
-        width: 18mm;
+        font-size: 7.5pt;
+        white-space: nowrap;
       }
-
-      .label-sm {
-        background: #f4f4f4;
+      .sbar {
+        background: #efefef;
         font-weight: 700;
-        white-space: nowrap;
         text-align: center;
-        font-size: 8pt;
-        width: 14mm;
+        letter-spacing: 0.3em;
+        font-size: 8.5pt;
+        padding: 1.5mm 0;
+        border: 1px solid #666;
+        border-top: none;
       }
+      .nt { border-top: none; }
+      .ck { font-size: 10pt; }
 
-      /* ======= 個人情報ブロック ======= */
-      .info-block {
-        display: grid;
-        grid-template-columns: 1fr 36mm;
-        gap: 0;
+      /* --- ヘッダー --- */
+      .doc-title {
+        text-align: center;
+        font-size: 17pt;
+        font-weight: 700;
+        letter-spacing: 0.5em;
+        padding: 1mm 0;
+      }
+      .doc-note {
+        font-size: 7pt;
+        color: #555;
+        text-align: center;
         margin-bottom: 2mm;
       }
 
-      .info-main table {
-        height: 100%;
-      }
-
-      .photo-cell {
-        border: 1px solid #555;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #999;
-        font-size: 8pt;
+      /* --- 写真欄 --- */
+      .photo {
         text-align: center;
-        min-height: 40mm;
+        vertical-align: middle;
+        color: #aaa;
+        font-size: 7.5pt;
         background: #fafafa;
-        margin-left: -1px;
+        width: 17%;
       }
 
-      /* ======= 学歴・職歴 ======= */
-      .section-title {
-        background: #f4f4f4;
-        font-weight: 700;
-        text-align: center;
-        font-size: 9pt;
-        padding: 1.5mm;
-        border: 1px solid #555;
-        letter-spacing: 0.3em;
-        margin-top: 2mm;
-      }
-
-      .career-row td {
-        padding: 1.5mm 2.5mm;
-      }
-
-      .year-col {
-        width: 14mm;
-        text-align: center;
-        font-size: 8.5pt;
-      }
-
-      .month-col {
-        width: 8mm;
-        text-align: center;
-        font-size: 8.5pt;
-      }
-
-      .event-col {
-        font-size: 9pt;
-      }
-
-      .indent {
-        padding-left: 6mm;
-      }
-
-      .right-align {
-        text-align: right;
-        font-size: 8pt;
-        padding-right: 3mm;
-      }
-
-      /* ======= 下部ブロック ======= */
-      .bottom-grid {
+      /* --- 給与 --- */
+      .sal-wrap {
+        border: 1px solid #666;
+        border-top: none;
+        padding: 2mm 3mm;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0;
-        margin-top: 2mm;
+        gap: 1.5mm 8mm;
       }
+      .sal-row { display: flex; align-items: baseline; gap: 2mm; font-size: 8pt; }
+      .sl { white-space: nowrap; min-width: 22mm; color: #333; font-size: 7.5pt; }
+      .sv { border-bottom: 1px solid #999; min-width: 12mm; text-align: right; }
+      .su { color: #555; font-size: 7.5pt; }
 
-      .bottom-grid > div:first-child {
-        margin-right: -1px;
-      }
-
-      .bottom-section-title {
-        background: #f4f4f4;
-        font-weight: 700;
-        text-align: center;
-        font-size: 8.5pt;
-        padding: 1.2mm;
-        border: 1px solid #555;
-        letter-spacing: 0.2em;
-      }
-
-      .multiline-cell {
-        border: 1px solid #555;
-        border-top: none;
-        min-height: 14mm;
-        padding: 2mm 2.5mm;
-        font-size: 9pt;
-      }
-
-      .misc-table td {
-        font-size: 8.5pt;
-        padding: 1.5mm 2.5mm;
-      }
-
-      /* ======= 通勤・家族ブロック ======= */
-      .meta-row {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        border: 1px solid #555;
-        border-top: none;
-      }
-
-      .meta-item {
-        padding: 1.5mm 2mm;
-        border-right: 1px solid #555;
-        font-size: 8pt;
-      }
-
-      .meta-item:last-child {
-        border-right: none;
-      }
-
-      .meta-item .meta-label {
-        font-weight: 700;
-        display: block;
-        font-size: 7.5pt;
-        color: #444;
-        margin-bottom: 1mm;
-      }
-
-      /* ======= 自己PR ======= */
-      .pr-title {
-        background: #f4f4f4;
-        font-weight: 700;
-        text-align: center;
-        font-size: 8.5pt;
-        padding: 1.2mm;
-        border: 1px solid #555;
-        border-top: none;
-        letter-spacing: 0.2em;
-      }
-
-      .pr-cell {
-        border: 1px solid #555;
-        border-top: none;
-        min-height: 22mm;
-        padding: 2.5mm 3mm;
-        font-size: 9pt;
-        line-height: 1.7;
-      }
+      /* --- 資格・語学 横並び --- */
+      .two-col { display: flex; }
+      .two-col > div { flex: 1; }
+      .two-col > div + div { margin-left: -1px; }
     </style>
   </head>
   <body>
 
     <p class="doc-title">履 歴 書</p>
-    <p class="doc-date">2026年4月27日 現在</p>
+    <p class="doc-note">年号はすべて西暦でご記入ください　／　2026年4月27日 現在</p>
 
-    <!-- ======= 個人情報 ======= -->
-    <div class="info-block">
-      <div class="info-main">
+    <!-- ===== 個人情報 ===== -->
+    <!-- col1:ラベル13%, col2:値40%, col3:連絡ラベル11%, col4:可否19%, col5:写真17% -->
+    <table>
+      <colgroup>
+        <col style="width:13%"/>
+        <col style="width:40%"/>
+        <col style="width:11%"/>
+        <col style="width:19%"/>
+        <col style="width:17%"/>
+      </colgroup>
+      <tr>
+        <td class="lbl">フリガナ</td>
+        <td colspan="3" style="letter-spacing:0.05em;">ナカムラ　タクミ</td>
+        <td class="photo" rowspan="12">写真貼付欄<br/>縦4cm×横3cm</td>
+      </tr>
+      <tr>
+        <td class="lbl">氏　名</td>
+        <td style="font-size:13pt; font-weight:700; letter-spacing:0.1em;">中 村　　匠</td>
+        <td class="lbl">生年月日</td>
+        <td style="font-size:8pt;">1992年5月1日（満33歳）</td>
+      </tr>
+      <tr>
+        <td class="lbl">性　別</td>
+        <td colspan="3">男</td>
+      </tr>
+      <tr>
+        <td class="lbl">郵便番号</td>
+        <td colspan="3">〒330-0073</td>
+      </tr>
+      <tr>
+        <td class="lbl">住所フリガナ</td>
+        <td colspan="3" style="font-size:7.5pt;">サイタマケン　サイタマシ　ウラワク　モトマチ 2-36-15</td>
+      </tr>
+      <tr>
+        <td class="lbl">現 住 所</td>
+        <td colspan="3">埼玉県さいたま市浦和区元町2-36-15</td>
+      </tr>
+      <tr>
+        <td class="lbl">最 寄 駅</td>
+        <td colspan="2">　　　　　線　　　　　駅</td>
+        <td style="font-size:8pt;">徒歩　　分　／　バス　　分</td>
+      </tr>
+      <tr>
+        <td class="lbl">携　帯</td>
+        <td>080-3001-7415</td>
+        <td class="lbl">連絡</td>
+        <td style="font-size:8pt;"><span class="ck">☑</span>可　　□不可</td>
+      </tr>
+      <tr>
+        <td class="lbl">自　宅</td>
+        <td></td>
+        <td class="lbl">連絡</td>
+        <td style="font-size:8pt;">□可　　□不可</td>
+      </tr>
+      <tr>
+        <td class="lbl">FAX</td>
+        <td></td>
+        <td class="lbl">利用</td>
+        <td style="font-size:8pt;">□可　　<span class="ck">☑</span>利用せず</td>
+      </tr>
+      <tr>
+        <td class="lbl">e-mail</td>
+        <td>takumi.nakamura.by@gmail.com</td>
+        <td class="lbl">連絡</td>
+        <td style="font-size:8pt;"><span class="ck">☑</span>可　　□不可</td>
+      </tr>
+      <tr>
+        <td class="lbl">携帯mail</td>
+        <td></td>
+        <td class="lbl">連絡</td>
+        <td style="font-size:8pt;">□可　　□不可</td>
+      </tr>
+      <tr>
+        <td class="lbl">家族構成</td>
+        <td colspan="4" style="font-size:8pt;">
+          □一人住まい　　<span class="ck">☑</span>家族同居　　□単身赴任
+        </td>
+      </tr>
+    </table>
+
+    <!-- ===== 学歴 ===== -->
+    <div class="sbar">学　　　歴　（高校以上・学部学科専攻まで記入）</div>
+    <table>
+      <colgroup>
+        <col style="width:10%"/>
+        <col style="width:5%"/>
+        <col/>
+      </colgroup>
+      <tr><td style="text-align:center;">2008</td><td style="text-align:center;">4</td><td>早稲田実業学校高等部　入学</td></tr>
+      <tr><td style="text-align:center;">2011</td><td style="text-align:center;">3</td><td>早稲田実業学校高等部　卒業</td></tr>
+      <tr><td style="text-align:center;">2011</td><td style="text-align:center;">4</td><td>早稲田大学　社会科学部社会科学科　入学</td></tr>
+      <tr><td style="text-align:center;">2016</td><td style="text-align:center;">3</td><td>早稲田大学　社会科学部社会科学科　卒業</td></tr>
+      <tr><td></td><td></td><td></td></tr>
+    </table>
+
+    <!-- ===== 職歴ヘッダー ===== -->
+    <div class="sbar">職　　　歴　（現職または直近の勤務先を上から新しい順に・アルバイト除く）</div>
+
+    <!-- 現職/離職・経験社数 -->
+    <table class="nt">
+      <colgroup>
+        <col style="width:13%"/><col style="width:20%"/>
+        <col style="width:13%"/><col/>
+      </colgroup>
+      <tr>
+        <td class="lbl">現職・離職</td>
+        <td style="font-size:8pt;"><span class="ck">☑</span>現職　□離職</td>
+        <td class="lbl">経験社数</td>
+        <td>1　社</td>
+      </tr>
+    </table>
+
+    <!-- 現職詳細 -->
+    <!-- col: 区分10% | 入退12% | 年7% | 月5% | 項目11% | 値 | 項目11% | 値13% -->
+    <table class="nt">
+      <colgroup>
+        <col style="width:10%"/>
+        <col style="width:8%"/>
+        <col style="width:7%"/>
+        <col style="width:5%"/>
+        <col style="width:11%"/>
+        <col/>
+        <col style="width:11%"/>
+        <col style="width:13%"/>
+      </colgroup>
+      <tr>
+        <td class="lbl" rowspan="4">現職/<br/>最終職歴</td>
+        <td class="lbl">入社</td>
+        <td style="text-align:center;">2016</td>
+        <td style="text-align:center;">9</td>
+        <td class="lbl">会社名</td>
+        <td>フューチャー株式会社</td>
+        <td class="lbl">雇用形態</td>
+        <td style="font-size:8pt;"><span class="ck">☑</span>正社員</td>
+      </tr>
+      <tr>
+        <td class="lbl">退社</td>
+        <td></td><td></td>
+        <td class="lbl">事業概要</td>
+        <td>システムコンサルティング・受託開発</td>
+        <td class="lbl">上場</td>
+        <td style="font-size:8pt;"><span class="ck">☑</span>上場</td>
+      </tr>
+      <tr>
+        <td class="lbl">在籍</td>
+        <td colspan="2" style="text-align:center; font-size:8pt;">約8年7ヶ月</td>
+        <td class="lbl">所属部署等</td>
+        <td>コードキャンプ出向</td>
+        <td class="lbl">従業員数</td>
+        <td>連結3,624名</td>
+      </tr>
+      <tr>
+        <td colspan="3"></td>
+        <td class="lbl">年収（額面）</td>
+        <td colspan="3">850万円</td>
+      </tr>
+    </table>
+
+    <!-- 職歴2（空欄） -->
+    <table class="nt">
+      <colgroup>
+        <col style="width:10%"/>
+        <col style="width:8%"/>
+        <col style="width:7%"/>
+        <col style="width:5%"/>
+        <col style="width:11%"/>
+        <col/>
+        <col style="width:11%"/>
+        <col style="width:13%"/>
+      </colgroup>
+      <tr>
+        <td class="lbl" rowspan="3">職歴</td>
+        <td class="lbl">入社</td>
+        <td></td><td></td>
+        <td class="lbl">会社名</td>
+        <td></td>
+        <td class="lbl">雇用形態</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="lbl">退社</td>
+        <td></td><td></td>
+        <td class="lbl">事業概要</td>
+        <td></td>
+        <td class="lbl">上場</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="lbl">在籍</td>
+        <td colspan="2"></td>
+        <td class="lbl">所属部署等</td>
+        <td></td>
+        <td class="lbl">従業員数</td>
+        <td></td>
+      </tr>
+    </table>
+
+    <!-- ===== 給与 ===== -->
+    <div class="sbar">職歴備考　／　現在または退職時給与（額面・通勤交通費除く）</div>
+    <div class="sal-wrap">
+      <div class="sal-row"><span class="sl">■ 月　収</span><span class="sv"></span><span class="su">万円（下記手当含む）</span></div>
+      <div class="sal-row"><span class="sl">■ 年間賞与</span><span class="sv"></span><span class="su">万円/年</span></div>
+      <div class="sal-row"><span class="sl">　残業手当</span><span class="sv"></span><span class="su">万円/月</span></div>
+      <div class="sal-row"><span class="sl">■ 寮社宅　会社負担</span><span class="sv"></span><span class="su">万円/月</span></div>
+      <div class="sal-row"><span class="sl">　住宅手当</span><span class="sv"></span><span class="su">万円/月</span></div>
+      <div class="sal-row"><span class="sl">　　　　　自己負担</span><span class="sv"></span><span class="su">万円/月</span></div>
+      <div class="sal-row"><span class="sl">　その他手当</span><span class="sv"></span><span class="su">万円/月</span></div>
+    </div>
+
+    <!-- ===== 家族・扶養 ===== -->
+    <table class="nt">
+      <colgroup>
+        <col style="width:22%"/>
+        <col style="width:11%"/>
+        <col style="width:10%"/>
+        <col style="width:11%"/>
+        <col style="width:17%"/>
+        <col/>
+      </colgroup>
+      <tr>
+        <td class="lbl">扶養家族数（配偶者除く）</td>
+        <td style="text-align:center;">1　人</td>
+        <td class="lbl">配偶者</td>
+        <td style="text-align:center; font-size:8pt;">□有　<span class="ck">☑</span>無</td>
+        <td class="lbl">配偶者の扶養義務</td>
+        <td style="text-align:center; font-size:8pt;">□有　<span class="ck">☑</span>無</td>
+      </tr>
+    </table>
+
+    <!-- ===== 免許・資格 ／ 語学力 ===== -->
+    <div class="sbar">免許・資格　／　語学力</div>
+    <div class="two-col">
+      <div>
         <table>
+          <colgroup>
+            <col style="width:28%"/>
+            <col/>
+          </colgroup>
           <tr>
-            <td class="label" style="width:12mm">フリガナ</td>
-            <td colspan="3" style="font-size:9pt; letter-spacing:0.05em;">ナカムラ　タクミ</td>
-            <td class="label" style="width:14mm">生年月日</td>
-            <td colspan="2">1992年5月1日生（満33歳）</td>
+            <td class="lbl">取得年月</td>
+            <td class="lbl">免許・資格</td>
+          </tr>
+          <tr><td style="text-align:center; font-size:8pt;">2011年8月</td><td>普通自動車第一種運転免許</td></tr>
+          <tr><td style="text-align:center; font-size:8pt;">2016年6月</td><td>日商簿記検定2級</td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </table>
+      </div>
+      <div>
+        <table>
+          <colgroup>
+            <col style="width:22%"/>
+            <col style="width:28%"/>
+            <col/>
+            <col style="width:22%"/>
+          </colgroup>
+          <tr>
+            <td class="lbl" colspan="4">語学力（英語）</td>
           </tr>
           <tr>
-            <td class="label">氏　名</td>
-            <td colspan="3" style="font-size:13pt; font-weight:700; letter-spacing:0.15em;">中 村　　匠</td>
-            <td class="label">性　別</td>
-            <td colspan="2" style="text-align:center;">男</td>
+            <td class="lbl">TOEIC</td>
+            <td class="lbl">取得年月</td>
+            <td></td>
+            <td class="lbl">スコア</td>
           </tr>
           <tr>
-            <td class="label" rowspan="2">現住所</td>
-            <td colspan="6">〒330-0073　埼玉県さいたま市浦和区元町2-36-15</td>
+            <td class="lbl">TOEFL</td>
+            <td class="lbl">取得年月</td>
+            <td></td>
+            <td class="lbl">スコア</td>
           </tr>
           <tr>
-            <td colspan="6" style="height:8mm;"></td>
+            <td class="lbl" colspan="2" style="font-size:7pt;">ビジネスでの利用経験</td>
+            <td colspan="2"></td>
           </tr>
           <tr>
-            <td class="label">電話番号</td>
-            <td colspan="2">080-3001-7415</td>
-            <td class="label" style="width:12mm">メール</td>
-            <td colspan="3">takumi.nakamura.by@gmail.com</td>
+            <td class="lbl" colspan="2" style="font-size:7pt;">ビジネスでの利用状況</td>
+            <td colspan="2"></td>
           </tr>
         </table>
       </div>
-      <div class="photo-cell">
-        写真貼付欄<br />
-        <span style="font-size:7pt;">（縦4cm×横3cm）</span>
-      </div>
     </div>
 
-    <!-- ======= 学歴・職歴 ======= -->
-    <div class="section-title">学歴・職歴</div>
+    <!-- ===== 趣味 ===== -->
+    <div class="sbar">趣　味　・　特　技</div>
     <table>
-      <tr class="career-row">
-        <td class="year-col"></td>
-        <td class="month-col"></td>
-        <td class="event-col right-align">学　　歴</td>
-      </tr>
-      <tr class="career-row">
-        <td class="year-col">2008</td>
-        <td class="month-col">4</td>
-        <td class="event-col">早稲田実業学校高等部　入学</td>
-      </tr>
-      <tr class="career-row">
-        <td class="year-col">2011</td>
-        <td class="month-col">3</td>
-        <td class="event-col">早稲田実業学校高等部　卒業</td>
-      </tr>
-      <tr class="career-row">
-        <td class="year-col">2011</td>
-        <td class="month-col">4</td>
-        <td class="event-col">早稲田大学　社会科学部社会科学科　入学</td>
-      </tr>
-      <tr class="career-row">
-        <td class="year-col">2016</td>
-        <td class="month-col">3</td>
-        <td class="event-col">早稲田大学　社会科学部社会科学科　卒業</td>
-      </tr>
-      <tr class="career-row">
-        <td class="year-col"></td>
-        <td class="month-col"></td>
-        <td class="event-col right-align">職　　歴</td>
-      </tr>
-      <tr class="career-row">
-        <td class="year-col">2016</td>
-        <td class="month-col">9</td>
-        <td class="event-col">フューチャー株式会社　入社（正社員）</td>
-      </tr>
-      <tr class="career-row">
-        <td class="year-col"></td>
-        <td class="month-col"></td>
-        <td class="event-col indent">システムコンサルティング・受託開発。インフラエンジニアとして公共・金融・ヘルスケア領域の案件を担当。</td>
-      </tr>
-      <tr class="career-row">
-        <td class="year-col">2019</td>
-        <td class="month-col">9</td>
-        <td class="event-col indent">コードキャンプ株式会社へ在籍出向（現在に至る）</td>
-      </tr>
-      <tr class="career-row">
-        <td class="year-col"></td>
-        <td class="month-col"></td>
-        <td class="event-col indent">インフラ／プラットフォーム領域のテックリード兼アプリケーションエンジニアとして従事。</td>
-      </tr>
-      <tr class="career-row">
-        <td class="year-col"></td>
-        <td class="month-col"></td>
-        <td class="event-col right-align">現在に至る</td>
-      </tr>
-      <tr class="career-row" style="height:8mm;">
-        <td class="year-col"></td>
-        <td class="month-col"></td>
-        <td class="event-col"></td>
-      </tr>
-      <tr class="career-row" style="height:8mm;">
-        <td class="year-col"></td>
-        <td class="month-col"></td>
-        <td class="event-col"></td>
-      </tr>
+      <tr><td style="height:9mm;">料理、育児</td></tr>
     </table>
-
-    <!-- ======= 資格・免許 ======= -->
-    <div class="bottom-section-title" style="margin-top:2mm;">免許・資格</div>
-    <table class="misc-table">
-      <tr>
-        <td class="year-col" style="width:14mm;">2011</td>
-        <td class="month-col" style="width:8mm;">8</td>
-        <td>普通自動車第一種運転免許　取得</td>
-      </tr>
-      <tr>
-        <td>2016</td>
-        <td>6</td>
-        <td>日商簿記検定2級　取得</td>
-      </tr>
-      <tr style="height:7mm;">
-        <td></td><td></td><td></td>
-      </tr>
-    </table>
-
-    <!-- ======= 通勤・家族・希望 ======= -->
-    <div class="meta-row" style="margin-top:2mm; border:1px solid #555;">
-      <div class="meta-item">
-        <span class="meta-label">通勤時間</span>
-        　　約　　分
-      </div>
-      <div class="meta-item">
-        <span class="meta-label">扶養家族数（配偶者除く）</span>
-        1人
-      </div>
-      <div class="meta-item">
-        <span class="meta-label">配偶者</span>
-        無
-      </div>
-      <div class="meta-item">
-        <span class="meta-label">配偶者の扶養義務</span>
-        無
-      </div>
-    </div>
-
-    <!-- ======= 趣味・特技 / 自己PR ======= -->
-    <div class="bottom-section-title" style="border-top:none;">趣味・特技</div>
-    <div class="multiline-cell" style="min-height:10mm;">
-      料理、育児
-    </div>
-
-    <div class="pr-title">志望動機・自己PR</div>
-    <div class="pr-cell">
-      インフラ／プラットフォーム領域のテックリードとして、信頼性向上・CI/CD最適化・テスト自動化・アプリ開発を一人称で推進してきました。技術選定から設計・実装・運用定着まで一貫して担当できることが強みです。直近は生成AI全社活用プロジェクトのPLとして、社内への生成AI導入・定着も推進しています。インフラとアプリを横断する実装力を活かし、貴社のプロダクト・組織の価値向上に貢献したいと考えています。
-    </div>
 
   </body>
 </html>
