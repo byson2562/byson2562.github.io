@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c \"import sys,json; d=json.load(sys.stdin); fp=d.get('tool_input',{}).get('file_path',''); print('[sync-portfolio] career.md を編集しました。CLAUDE.md の同期ルールに従い index.html を自動更新してください。') if fp.endswith('career.md') else None\""
+          }
+        ]
+      }
+    ]
+  }
+}
