@@ -1,9 +1,9 @@
 node_modules/
+*.html
+!index.html
 portfolio.pdf
 career.pdf
-career.html
 職務経歴書.pdf
-職務経歴書.html
 履歴書.pdf
 package.json
 package-lock.json
@@ -11,15 +11,8 @@ build-pdf.mjs
 
 # 転職活動の機密情報（公開禁止）
 候補企業リスト.md
-候補企業リスト.html
 候補企業リスト.pdf
-
 # 個人情報・面談メモ
-履歴書.html
-履歴書.pdf
-履歴書（*.pdf
-職務経歴書.md
-職務経歴書.html
-職務経歴書.pdf
-職務経歴書（*.pdf
+履歴書*
+職務経歴書*
 カジュアル面談/
