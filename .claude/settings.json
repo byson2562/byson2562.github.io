@@ -1,3 +1,16 @@
 {
-  "hooks": {}
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path // \"\"' | grep -q '職務経歴書\\.md' && cd /Users/tnakamura/git/byson2562.github.io && PATH=\"/opt/homebrew/opt/node@20/bin:$PATH\" node build-pdf.mjs 職務経歴書.md 2>/dev/null || true",
+            "statusMessage": "職務経歴書.html を再ビルド中..."
+          }
+        ]
+      }
+    ]
+  }
 }

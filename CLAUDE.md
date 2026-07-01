@@ -6,6 +6,12 @@
 PATH="/opt/homebrew/opt/node@20/bin:$PATH" node build-pdf.mjs 職務経歴書.md
 ```
 
+Markdown から中間 HTML を生成する。PDF も必要な場合は以下を使う。
+
+```bash
+PATH="/opt/homebrew/opt/node@20/bin:$PATH" node build-pdf.mjs 職務経歴書.md --pdf
+```
+
 職務経歴書.md（Markdown）→ 職務経歴書.html（中間）→ 職務経歴書.pdf を生成する。
 
 ## 文章の自然さ

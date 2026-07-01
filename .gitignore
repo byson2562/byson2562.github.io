@@ -8,3 +8,8 @@ career.html
 package.json
 package-lock.json
 build-pdf.mjs
+
+# 転職活動の機密情報（公開禁止）
+候補企業リスト.md
+候補企業リスト.html
+候補企業リスト.pdf
