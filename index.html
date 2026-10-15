@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="中村匠のプロフィールサイト。インフラからアプリまで一気通貫で見れるアプリケーションエンジニア / テックリードとしての実績、スキル、経歴、人となりを掲載。"
+      content="中村匠のプロフィールサイト。インフラからアプリまで一気通貫で担当するアプリケーションエンジニア / テックリードのスキル、経歴、人となりを掲載。"
     />
     <meta name="author" content="Takumi Nakamura" />
 
@@ -135,12 +135,6 @@
           class="flex gap-[18px] text-[0.92rem] max-[720px]:flex-wrap max-[720px]:justify-center max-[720px]:gap-2.5 max-[720px]:text-[0.82rem]"
           aria-label="グローバルナビゲーション"
         >
-          <a class="text-muted no-underline hover:text-ink" href="#value"
-            >Value</a
-          >
-          <a class="text-muted no-underline hover:text-ink" href="#projects"
-            >Projects</a
-          >
           <a class="text-muted no-underline hover:text-ink" href="#skills"
             >Skills</a
           >
@@ -225,164 +219,10 @@
               >
               <a
                 class="inline-block rounded-full border border-ink bg-transparent px-[18px] py-2.5 text-[0.92rem] font-bold text-ink no-underline transition-transform duration-200 hover:-translate-y-0.5"
-                href="#projects"
-                >実績を見る</a
+                href="#career"
+                >経歴を見る</a
               >
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="value" class="py-[84px] max-[720px]:py-16">
-        <div class="mx-auto w-[min(1080px,92vw)]">
-          <div class="reveal mb-[26px] flex flex-col gap-2">
-            <h2
-              class="text-[clamp(1.4rem,3.2vw,2rem)] font-black leading-[1.3]"
-            >
-              できること
-            </h2>
-            <p class="text-[0.94rem] text-muted">
-              インフラからアプリまで、仕様策定から実装・運用まで対応します
-            </p>
-          </div>
-          <div class="grid grid-cols-3 gap-4 max-[980px]:grid-cols-1">
-            <article
-              class="reveal rounded-[14px] border border-line bg-surface p-5 shadow-card"
-            >
-              <h3 class="text-[1.1rem] font-bold">
-                1. インフラとアプリ両軸の実装
-              </h3>
-              <p class="mt-3 text-[0.95rem] text-muted">
-                Rails・React によるアプリ機能開発を主軸に、その土台となるインフラ・SRE
-                領域まで対応。アプリだけ・インフラだけで終わらせず、両方見えるからこそ選べる設計をします。
-              </p>
-              <ul class="mt-3 list-disc pl-[1.1rem] text-[0.95rem] text-muted">
-                <li>インフラ・SRE領域の設計／構築／運用</li>
-                <li>Rails によるバックエンド機能開発</li>
-                <li>React / TypeScript によるフロント実装</li>
-              </ul>
-            </article>
-            <article
-              class="reveal rounded-[14px] border border-line bg-surface p-5 shadow-card"
-            >
-              <h3 class="text-[1.1rem] font-bold">
-                2. 技術選定から運用まで一貫して推進
-              </h3>
-              <p class="mt-3 text-[0.95rem] text-muted">
-                流行りではなく、用途と運用負荷で技術を選びます。DevとOpsの両面から無理のない構成に落とし込みます。
-              </p>
-              <ul class="mt-3 list-disc pl-[1.1rem] text-[0.95rem] text-muted">
-                <li>用途・運用負荷を踏まえた技術選定</li>
-                <li>要件の整理と優先順位づけ</li>
-                <li>モニタリングのためのツール導入・通知実装</li>
-              </ul>
-            </article>
-            <article
-              class="reveal rounded-[14px] border border-line bg-surface p-5 shadow-card"
-            >
-              <h3 class="text-[1.1rem] font-bold">3. 開発体験の向上</h3>
-              <p class="mt-3 text-[0.95rem] text-muted">
-                CI/CD、テスト、ツールを整理し、チームが速く安全にリリースできる状態を作ります。
-              </p>
-              <ul class="mt-3 list-disc pl-[1.1rem] text-[0.95rem] text-muted">
-                <li>パイプラインの最適化</li>
-                <li>CIテストの導入・改善</li>
-                <li>ツールの選定と導入</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="bg-[#f8f6f2] py-[84px] max-[720px]:py-16">
-        <div class="mx-auto w-[min(1080px,92vw)]">
-          <div class="reveal mb-[26px] flex flex-col gap-2">
-            <h2
-              class="text-[clamp(1.4rem,3.2vw,2rem)] font-black leading-[1.3]"
-            >
-              主な実績
-            </h2>
-            <p class="text-[0.94rem] text-muted">
-              技術導入だけでなく、運用定着まで含めて推進した取り組みです。
-            </p>
-          </div>
-
-          <div class="grid gap-[14px]">
-            <article
-              class="reveal grid grid-cols-[130px_1fr] gap-4 rounded-[14px] border border-line bg-surface p-[18px] shadow-card max-[980px]:grid-cols-1 max-[980px]:gap-2"
-            >
-              <div class="font-display text-[0.86rem] font-bold text-accent2">
-                Infrastructure
-              </div>
-              <div>
-                <h3 class="text-[1.02rem] font-bold">
-                  EC2中心の構成をECS Fargateへ段階移行
-                </h3>
-                <p class="mt-2">
-                  アーキテクチャを全面刷新。OSパッチ運用を不要化し、単一障害点も解消。
-                </p>
-              </div>
-            </article>
-            <article
-              class="reveal grid grid-cols-[130px_1fr] gap-4 rounded-[14px] border border-line bg-surface p-[18px] shadow-card max-[980px]:grid-cols-1 max-[980px]:gap-2"
-            >
-              <div class="font-display text-[0.86rem] font-bold text-accent2">
-                CI/CD
-              </div>
-              <div>
-                <h3 class="text-[1.02rem] font-bold">
-                  CIをCircleCIからGitHub Actionsへ移行
-                </h3>
-                <p class="mt-2">
-                  既存ジョブの棚卸しとキャッシュ方針の見直しで、CI実行時間を最大約5分短縮。CIツールをGitHubに一元化し、保守性も向上。
-                </p>
-              </div>
-            </article>
-            <article
-              class="reveal grid grid-cols-[130px_1fr] gap-4 rounded-[14px] border border-line bg-surface p-[18px] shadow-card max-[980px]:grid-cols-1 max-[980px]:gap-2"
-            >
-              <div class="font-display text-[0.86rem] font-bold text-accent2">
-                Quality
-              </div>
-              <div>
-                <h3 class="text-[1.02rem] font-bold">
-                  E2E/System Spec導入と品質改善サイクルの構築
-                </h3>
-                <p class="mt-2">
-                  PdMを交えて対象機能を整理し、E2Eテストを実装。年3〜4回起きていたリリース後の機能障害を年0〜1回に抑制。
-                </p>
-              </div>
-            </article>
-            <article
-              class="reveal grid grid-cols-[130px_1fr] gap-4 rounded-[14px] border border-line bg-surface p-[18px] shadow-card max-[980px]:grid-cols-1 max-[980px]:gap-2"
-            >
-              <div class="font-display text-[0.86rem] font-bold text-accent2">
-                Product
-              </div>
-              <div>
-                <h3 class="text-[1.02rem] font-bold">
-                  生成AIを活用したソースコード添削機能を開発
-                </h3>
-                <p class="mt-2">
-                  仕様策定から実装まで担当し、学習者向けのフィードバック体験を向上。主要な学習機能として本番運用中。
-                </p>
-              </div>
-            </article>
-            <article
-              class="reveal grid grid-cols-[130px_1fr] gap-4 rounded-[14px] border border-line bg-surface p-[18px] shadow-card max-[980px]:grid-cols-1 max-[980px]:gap-2"
-            >
-              <div class="font-display text-[0.86rem] font-bold text-accent2">
-                Education
-              </div>
-              <div>
-                <h3 class="text-[1.02rem] font-bold">
-                  クラウド / AWS 教材の執筆とLinux教材のレビュー
-                </h3>
-                <p class="mt-2">
-                  法人研修向けにクラウド・AWSの教材執筆およびLinux教材のレビューを担当。
-                </p>
-              </div>
-            </article>
           </div>
         </div>
       </section>
@@ -506,7 +346,8 @@
                   ITコンサルタントとして入社後、社内横断のインフラチームに配属となり、公共・ヘルスケア・金融領域の案件を担当。2019年9月よりコードキャンプ株式会社へ在籍出向。Rails
                   / React
                   によるアプリケーション開発を担いつつ、インフラ・SRE
-                  領域ではテックリードとして技術選定から運用定着まで一気通貫で推進。
+                  領域ではテックリードとして技術選定から運用定着まで一気通貫で推進。ECS
+                  Fargateへの移行、CI/CDの刷新、E2Eテストの導入、生成AIを活用した添削機能の開発などを主導。
                 </p>
               </div>
             </article>
@@ -604,7 +445,7 @@
             >
               <h3 class="text-[1.1rem] font-bold">水泳</h3>
               <p class="mt-3 text-[0.95rem] text-muted">
-                水泳は健康のために昨年から週に1回のペースで続けています。明らかに体調が良くなるので、今後も続けていきたいです。
+                健康のために、昨年から週に1回のペースで続けています。明らかに体調が良くなるので、今後も続けていきたいです。
               </p>
             </article>
           </div>
@@ -693,10 +534,10 @@
             <h2
               class="text-[clamp(1.4rem,3.2vw,2rem)] font-black leading-[1.3]"
             >
-              採用・副業のご相談
+              お問い合わせ
             </h2>
             <p class="mx-auto mt-3 max-w-[50ch] text-muted">
-              採用や副業のご相談は、メールにてお気軽にご連絡ください。<br />
+              ご連絡はメールにてお気軽にどうぞ。<br />
               返信は2営業日以内を目安にしています。
             </p>
             <div class="mt-7 flex justify-center">
