@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ja" class="scroll-smooth">
+<html lang="ja">
   <head>
     <script
       async
@@ -37,7 +37,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&amp;family=Poppins:wght@600;700&amp;display=swap"
       rel="stylesheet"
     />
 
@@ -48,27 +48,12 @@
         theme: {
           extend: {
             colors: {
-              bg: "#ffffff",
-              surface: "#ffffff",
-              "surface-strong": "#ffffff",
-              ink: "#1f2833",
-              muted: "#4f5f73",
-              line: "#d8cfbe",
-              accent: "#1c6e8c",
-              accent2: "#d26a29",
-              accent3: "#2d8fb1",
+              paper: "#c9e1ec",
+              ink: "#123e8c",
             },
             fontFamily: {
-              sans: [
-                '"Zen Kaku Gothic New"',
-                '"Hiragino Kaku Gothic ProN"',
-                "sans-serif",
-              ],
-              display: ['"Space Grotesk"', "sans-serif"],
-            },
-            boxShadow: {
-              soft: "0 14px 42px rgba(24, 35, 46, 0.12)",
-              card: "0 8px 24px rgba(24, 35, 46, 0.07)",
+              sans: ['"Zen Maru Gothic"', '"Hiragino Maru Gothic ProN"', "sans-serif"],
+              display: ['"Poppins"', "sans-serif"],
             },
           },
         },
@@ -77,18 +62,7 @@
 
     <style>
       body {
-        background:
-          radial-gradient(
-            circle at 12% 12%,
-            rgba(28, 110, 140, 0.05),
-            transparent 35%
-          ),
-          radial-gradient(
-            circle at 84% 0%,
-            rgba(210, 106, 41, 0.045),
-            transparent 40%
-          ),
-          #ffffff;
+        background: #c9e1ec;
       }
 
       /* ローマ字ルビ（氏名の下に配置） */
@@ -97,313 +71,179 @@
         -webkit-ruby-position: under;
       }
       .ruby-name rt {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 0.32em;
-        font-weight: 500;
-        letter-spacing: 0.14em;
-        color: #4f5f73;
+        font-family: "Poppins", sans-serif;
+        font-size: 0.3em;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        color: rgba(18, 62, 140, 0.65);
         text-transform: uppercase;
         margin-top: 6px;
-      }
-
-      /* スクロール表示アニメーション */
-      .reveal {
-        opacity: 0;
-        transform: translateY(12px);
-        transition:
-          opacity 0.6s ease,
-          transform 0.6s ease;
-      }
-      .reveal.visible {
-        opacity: 1;
-        transform: none;
       }
     </style>
   </head>
 
-  <body class="font-sans text-ink leading-[1.75] antialiased">
-    <header
-      class="sticky top-0 z-10 border-b border-line/70 bg-bg/80 backdrop-blur-[10px]"
-    >
-      <div
-        class="mx-auto flex min-h-[72px] w-[min(1080px,92vw)] items-center justify-between max-[720px]:min-h-0 max-[720px]:flex-col max-[720px]:justify-center max-[720px]:gap-2 max-[720px]:py-2.5"
-      >
-        <div class="font-display text-[1.1rem] font-bold tracking-[0.04em]">
-          TAKUMI NAKAMURA
-        </div>
-        <nav
-          class="flex gap-[18px] text-[0.92rem] max-[720px]:flex-wrap max-[720px]:justify-center max-[720px]:gap-2.5 max-[720px]:text-[0.82rem]"
-          aria-label="グローバルナビゲーション"
-        >
-          <a class="text-muted no-underline hover:text-ink" href="#skills"
-            >Skills</a
-          >
-          <a class="text-muted no-underline hover:text-ink" href="#career"
-            >Career</a
-          >
-          <a class="text-muted no-underline hover:text-ink" href="#mindset"
-            >Mindset</a
-          >
-          <a class="text-muted no-underline hover:text-ink" href="#personal"
-            >Personal</a
-          >
-          <a class="text-muted no-underline hover:text-ink" href="#contact"
-            >Contact</a
-          >
-        </nav>
-      </div>
-    </header>
-
+  <body class="font-sans text-ink leading-[1.9] antialiased">
     <main>
-      <section class="pb-10 pt-[72px] max-[980px]:pt-12">
-        <div class="mx-auto w-[min(1080px,92vw)]">
-          <div
-            class="reveal mx-auto grid max-w-[720px] justify-items-center gap-4 text-center"
+      <!-- Hero -->
+      <section class="px-4 pb-20 pt-20 max-[720px]:pt-14">
+        <div class="mx-auto flex w-[min(640px,92vw)] flex-col items-center gap-5 text-center">
+          <img
+            src="./image/bonobono.png"
+            alt="中村匠のプロフィール画像"
+            class="h-[128px] w-[128px] rounded-full border-4 border-ink object-cover"
+          />
+          <h1
+            class="ruby-name text-[clamp(2rem,6vw,3rem)] font-bold leading-[1.3]"
           >
-            <img
-              src="./image/bonobono.png"
-              alt="中村匠のプロフィール画像"
-              class="h-[132px] w-[132px] rounded-full border-[3px] border-surface object-cover shadow-soft"
-            />
-            <p
-              class="font-display text-[0.82rem] font-bold uppercase tracking-[0.1em] text-accent"
-            >
-              Profile
-            </p>
-            <h1
-              class="ruby-name text-[clamp(1.8rem,4vw,2.95rem)] font-bold leading-[1.3]"
-            >
-              <ruby>中村<rt>Nakamura</rt></ruby
-              >&nbsp;<ruby>匠<rt>Takumi</rt></ruby>
-            </h1>
-            <p class="text-[clamp(1rem,2.2vw,1.18rem)] font-bold text-ink">
-              アプリケーションエンジニア / インフラ・SREテックリード
-            </p>
-            <p class="mx-auto max-w-[62ch] text-muted">
-              コードキャンプ株式会社にて Rails / React
-              によるアプリケーション開発を主軸に、その土台となる
-              AWS・CI/CD・監視などインフラ・SRE
-              領域まで一気通貫で担当しています。
-            </p>
-            <div class="flex flex-wrap justify-center gap-2">
-              <span
-                class="rounded-full bg-gradient-to-br from-accent to-accent3 px-[11px] py-[5px] text-[0.8rem] text-white"
-                >AWS</span
-              >
-              <span
-                class="rounded-full bg-gradient-to-br from-accent to-accent3 px-[11px] py-[5px] text-[0.8rem] text-white"
-                >Ruby on Rails</span
-              >
-              <span
-                class="rounded-full bg-gradient-to-br from-accent to-accent3 px-[11px] py-[5px] text-[0.8rem] text-white"
-                >React</span
-              >
-              <span
-                class="rounded-full bg-gradient-to-br from-accent to-accent3 px-[11px] py-[5px] text-[0.8rem] text-white"
-                >GitHub Actions</span
-              >
-              <span
-                class="rounded-full bg-gradient-to-br from-accent to-accent3 px-[11px] py-[5px] text-[0.8rem] text-white"
-                >Docker</span
-              >
-              <span
-                class="rounded-full bg-gradient-to-br from-accent to-accent3 px-[11px] py-[5px] text-[0.8rem] text-white"
-                >IaC</span
-              >
-            </div>
-            <div class="mt-3 flex flex-wrap justify-center gap-3">
-              <a
-                class="inline-block rounded-full border border-accent bg-accent px-[18px] py-2.5 text-[0.92rem] font-bold text-white no-underline transition-transform duration-200 hover:-translate-y-0.5"
-                href="#contact"
-                >連絡する</a
-              >
-              <a
-                class="inline-block rounded-full border border-ink bg-transparent px-[18px] py-2.5 text-[0.92rem] font-bold text-ink no-underline transition-transform duration-200 hover:-translate-y-0.5"
-                href="#career"
-                >経歴を見る</a
-              >
-            </div>
+            <ruby>中村<rt>Nakamura</rt></ruby
+            >&nbsp;<ruby>匠<rt>Takumi</rt></ruby>
+          </h1>
+          <p class="text-[clamp(0.95rem,2.4vw,1.1rem)] font-bold">
+            <span class="inline-block">アプリケーションエンジニア /</span>
+            <span class="inline-block">インフラ・SREテックリード</span>
+          </p>
+          <p class="text-left text-[0.95rem] text-ink/80">
+            コードキャンプ株式会社にて Rails / React
+            によるアプリケーション開発を主軸に、その土台となる
+            AWS・CI/CD・監視などインフラ・SRE
+            領域まで一気通貫で担当しています。
+          </p>
+          <div class="flex flex-wrap justify-center gap-2">
+            <span class="rounded-full bg-ink px-4 py-1 font-display text-[0.78rem] font-semibold text-paper">AWS</span>
+            <span class="rounded-full bg-ink px-4 py-1 font-display text-[0.78rem] font-semibold text-paper">Ruby on Rails</span>
+            <span class="rounded-full bg-ink px-4 py-1 font-display text-[0.78rem] font-semibold text-paper">React</span>
+            <span class="rounded-full bg-ink px-4 py-1 font-display text-[0.78rem] font-semibold text-paper">GitHub Actions</span>
+            <span class="rounded-full bg-ink px-4 py-1 font-display text-[0.78rem] font-semibold text-paper">Docker</span>
+            <span class="rounded-full bg-ink px-4 py-1 font-display text-[0.78rem] font-semibold text-paper">IaC</span>
           </div>
         </div>
       </section>
 
-      <section id="skills" class="py-[84px] max-[720px]:py-16">
-        <div class="mx-auto w-[min(1080px,92vw)]">
-          <div class="reveal mb-[26px] flex flex-col gap-2">
-            <h2
-              class="text-[clamp(1.4rem,3.2vw,2rem)] font-black leading-[1.3]"
+      <!-- Skills -->
+      <section id="skills" class="px-4 py-16">
+        <div class="mx-auto w-[min(640px,92vw)]">
+          <h2 class="text-center">
+            <span
+              class="block font-display text-[clamp(1.9rem,5vw,2.5rem)] font-bold uppercase tracking-[0.08em]"
+              >Skills</span
             >
-              スキルセット
-            </h2>
-            <p class="text-[0.94rem] text-muted">
-              実務での活用度をベースに、習熟度別に整理しています。
-            </p>
-          </div>
+            <span class="mt-1 block text-[0.9rem] font-bold">スキルセット</span>
+          </h2>
+          <p class="mt-4 text-center text-[0.9rem] text-ink/80">
+            実務での活用度をベースに、習熟度別に整理しています。
+          </p>
 
-          <div class="grid grid-cols-3 gap-4 max-[980px]:grid-cols-1">
-            <article
-              class="reveal rounded-[14px] border border-line bg-surface p-5 shadow-card"
-            >
-              <h3
-                class="font-display text-[0.82rem] font-bold uppercase tracking-[0.1em] text-accent"
-              >
+          <div class="mt-10 flex flex-col gap-8">
+            <div class="text-center">
+              <h3 class="font-display text-[0.85rem] font-bold uppercase tracking-[0.18em]">
                 Advanced
               </h3>
-              <div class="mt-3 flex flex-wrap gap-2">
-                <span
-                  class="rounded-full bg-accent/10 px-3 py-1 text-[0.85rem] font-medium text-accent"
-                  >AWS / Cloud</span
-                >
-                <span
-                  class="rounded-full bg-accent/10 px-3 py-1 text-[0.85rem] font-medium text-accent"
-                  >Ruby on Rails</span
-                >
-                <span
-                  class="rounded-full bg-accent/10 px-3 py-1 text-[0.85rem] font-medium text-accent"
-                  >IaC (CloudFormation / Ansible)</span
-                >
-                <span
-                  class="rounded-full bg-accent/10 px-3 py-1 text-[0.85rem] font-medium text-accent"
-                  >Linux / OS</span
-                >
+              <div class="mt-3 flex flex-wrap justify-center gap-2">
+                <span class="rounded-full bg-white px-4 py-1.5 text-[0.85rem] font-medium">AWS / Cloud</span>
+                <span class="rounded-full bg-white px-4 py-1.5 text-[0.85rem] font-medium">Ruby on Rails</span>
+                <span class="rounded-full bg-white px-4 py-1.5 text-[0.85rem] font-medium">IaC (CloudFormation / Ansible)</span>
+                <span class="rounded-full bg-white px-4 py-1.5 text-[0.85rem] font-medium">Linux / OS</span>
               </div>
-            </article>
-            <article
-              class="reveal rounded-[14px] border border-line bg-surface p-5 shadow-card"
-            >
-              <h3
-                class="font-display text-[0.82rem] font-bold uppercase tracking-[0.1em] text-accent"
-              >
+            </div>
+            <div class="text-center">
+              <h3 class="font-display text-[0.85rem] font-bold uppercase tracking-[0.18em]">
                 Intermediate+
               </h3>
-              <div class="mt-3 flex flex-wrap gap-2">
-                <span
-                  class="rounded-full bg-accent/10 px-3 py-1 text-[0.85rem] font-medium text-accent"
-                  >CI/CD Design</span
-                >
-                <span
-                  class="rounded-full bg-accent/10 px-3 py-1 text-[0.85rem] font-medium text-accent"
-                  >React / Frontend</span
-                >
-                <span
-                  class="rounded-full bg-accent/10 px-3 py-1 text-[0.85rem] font-medium text-accent"
-                  >Observability</span
-                >
+              <div class="mt-3 flex flex-wrap justify-center gap-2">
+                <span class="rounded-full bg-white px-4 py-1.5 text-[0.85rem] font-medium">CI/CD Design</span>
+                <span class="rounded-full bg-white px-4 py-1.5 text-[0.85rem] font-medium">React / Frontend</span>
+                <span class="rounded-full bg-white px-4 py-1.5 text-[0.85rem] font-medium">Observability</span>
               </div>
-            </article>
-            <article
-              class="reveal rounded-[14px] border border-line bg-surface p-5 shadow-card"
-            >
-              <h3
-                class="font-display text-[0.82rem] font-bold uppercase tracking-[0.1em] text-accent"
-              >
+            </div>
+            <div class="text-center">
+              <h3 class="font-display text-[0.85rem] font-bold uppercase tracking-[0.18em]">
                 Intermediate
               </h3>
-              <div class="mt-3 flex flex-wrap gap-2">
-                <span
-                  class="rounded-full bg-accent/10 px-3 py-1 text-[0.85rem] font-medium text-accent"
-                  >Testing (RSpec / E2E)</span
-                >
-                <span
-                  class="rounded-full bg-accent/10 px-3 py-1 text-[0.85rem] font-medium text-accent"
-                  >Database / SQL</span
-                >
-                <span
-                  class="rounded-full bg-accent/10 px-3 py-1 text-[0.85rem] font-medium text-accent"
-                  >AI Workflow (n8n / Dify)</span
-                >
+              <div class="mt-3 flex flex-wrap justify-center gap-2">
+                <span class="rounded-full bg-white px-4 py-1.5 text-[0.85rem] font-medium">Testing (RSpec / E2E)</span>
+                <span class="rounded-full bg-white px-4 py-1.5 text-[0.85rem] font-medium">Database / SQL</span>
+                <span class="rounded-full bg-white px-4 py-1.5 text-[0.85rem] font-medium">AI Workflow (n8n / Dify)</span>
               </div>
-            </article>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="career" class="bg-[#f8f6f2] py-[84px] max-[720px]:py-16">
-        <div class="mx-auto w-[min(1080px,92vw)]">
-          <div class="reveal mb-[26px] flex flex-col gap-2">
-            <h2
-              class="text-[clamp(1.4rem,3.2vw,2rem)] font-black leading-[1.3]"
+      <!-- Career -->
+      <section id="career" class="px-4 py-16">
+        <div class="mx-auto w-[min(640px,92vw)]">
+          <h2 class="text-center">
+            <span
+              class="block font-display text-[clamp(1.9rem,5vw,2.5rem)] font-bold uppercase tracking-[0.08em]"
+              >Career</span
             >
-              経歴
-            </h2>
-            <p class="text-[0.94rem] text-muted">
-              インフラ起点でキャリアを開始し、アプリケーション領域まで拡張してきました。
-            </p>
-          </div>
+            <span class="mt-1 block text-[0.9rem] font-bold">経歴</span>
+          </h2>
+          <p class="mt-4 text-center text-[0.9rem] text-ink/80">
+            インフラ起点でキャリアを開始し、アプリケーション領域まで拡張してきました。
+          </p>
 
-          <div class="grid gap-[14px]">
-            <article
-              class="reveal grid grid-cols-[130px_1fr] gap-4 rounded-[14px] border border-line bg-surface p-[18px] shadow-card max-[980px]:grid-cols-1 max-[980px]:gap-2"
-            >
-              <div class="font-display text-[0.86rem] font-bold text-accent2">
+          <div class="mt-10 flex flex-col">
+            <article class="border-t-2 border-ink/20 py-7">
+              <p class="font-display text-[0.85rem] font-bold tracking-[0.06em]">
                 2016.09 - Present
-              </div>
-              <div>
-                <h3 class="text-[1.02rem] font-bold">
-                  フューチャー株式会社（在籍出向含む）
-                </h3>
-                <p class="mt-2">
-                  ITコンサルタントとして入社後、社内横断のインフラチームに配属となり、公共・ヘルスケア・金融領域の案件を担当。2019年9月よりコードキャンプ株式会社へ在籍出向。Rails
-                  / React
-                  によるアプリケーション開発を担いつつ、インフラ・SRE
-                  領域ではテックリードとして技術選定から運用定着まで一気通貫で推進。ECS
-                  Fargateへの移行、CI/CDの刷新、E2Eテストの導入、生成AIを活用した添削機能の開発などを主導。
-                </p>
-              </div>
+              </p>
+              <h3 class="mt-1 text-[1.05rem] font-bold">
+                フューチャー株式会社（在籍出向含む）
+              </h3>
+              <p class="mt-2 text-[0.95rem] text-ink/80">
+                ITコンサルタントとして入社後、社内横断のインフラチームに配属となり、公共・ヘルスケア・金融領域の案件を担当。2019年9月よりコードキャンプ株式会社へ在籍出向。Rails
+                / React
+                によるアプリケーション開発を担いつつ、インフラ・SRE
+                領域ではテックリードとして技術選定から運用定着まで一気通貫で推進。ECS
+                Fargateへの移行、CI/CDの刷新、E2Eテストの導入、生成AIを活用した添削機能の開発などを主導。
+              </p>
             </article>
-            <article
-              class="reveal grid grid-cols-[130px_1fr] gap-4 rounded-[14px] border border-line bg-surface p-[18px] shadow-card max-[980px]:grid-cols-1 max-[980px]:gap-2"
-            >
-              <div class="font-display text-[0.86rem] font-bold text-accent2">
+            <article class="border-t-2 border-ink/20 py-7">
+              <p class="font-display text-[0.85rem] font-bold tracking-[0.06em]">
                 2011.04 - 2016.03
-              </div>
-              <div>
-                <h3 class="text-[1.02rem] font-bold">早稲田大学 社会科学部</h3>
-                <p class="mt-2">
-                  ボート部に所属。大学横断の大会運営学生団体（学連）の幹部として、組織運営や対外折衝を担当。
-                </p>
-              </div>
+              </p>
+              <h3 class="mt-1 text-[1.05rem] font-bold">早稲田大学 社会科学部</h3>
+              <p class="mt-2 text-[0.95rem] text-ink/80">
+                ボート部に所属。大学横断の大会運営学生団体（学連）の幹部として、組織運営や対外折衝を担当。
+              </p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="mindset" class="py-[84px] max-[720px]:py-16">
-        <div class="mx-auto w-[min(1080px,92vw)]">
-          <div class="reveal mb-[26px] flex flex-col gap-2">
-            <h2
-              class="text-[clamp(1.4rem,3.2vw,2rem)] font-black leading-[1.3]"
+      <!-- Mindset -->
+      <section id="mindset" class="px-4 py-16">
+        <div class="mx-auto w-[min(640px,92vw)]">
+          <h2 class="text-center">
+            <span
+              class="block font-display text-[clamp(1.9rem,5vw,2.5rem)] font-bold uppercase tracking-[0.08em]"
+              >Mindset</span
             >
-              大事にしていること
-            </h2>
-            <p class="text-[0.94rem] text-muted">
-              仕事のうえで、いつも立ち返るようにしている考え方です。
-            </p>
-          </div>
-          <div class="grid grid-cols-3 gap-4 max-[980px]:grid-cols-1">
-            <article
-              class="reveal rounded-[14px] border border-line bg-surface p-5 shadow-card"
-            >
-              <h3 class="text-[1.1rem] font-bold">手段を目的化しない</h3>
-              <p class="mt-3 text-[0.95rem] text-muted">
+            <span class="mt-1 block text-[0.9rem] font-bold">大事にしていること</span>
+          </h2>
+          <p class="mt-4 text-center text-[0.9rem] text-ink/80">
+            仕事のうえで、いつも立ち返るようにしている考え方です。
+          </p>
+
+          <div class="mt-10 flex flex-col">
+            <article class="border-t-2 border-ink/20 py-7">
+              <h3 class="text-[1.05rem] font-bold">手段を目的化しない</h3>
+              <p class="mt-2 text-[0.95rem] text-ink/80">
                 「技術を入れること」自体を目的にしない。事業やプロダクトにとって何が必要かを考え、手段を選ぶようにしています。
               </p>
             </article>
-            <article
-              class="reveal rounded-[14px] border border-line bg-surface p-5 shadow-card"
-            >
-              <h3 class="text-[1.1rem] font-bold">
+            <article class="border-t-2 border-ink/20 py-7">
+              <h3 class="text-[1.05rem] font-bold">
                 アウトプットを出す（評論家にならない）
               </h3>
-              <p class="mt-3 text-[0.95rem] text-muted">
+              <p class="mt-2 text-[0.95rem] text-ink/80">
                 自社や顧客、プロダクトにとって何が必要かを考え、アプリやインフラのレイヤ問わず、時にはエンジニアリングの範疇も超えて、価値提供につながるアウトプットを出すことを大切にしています。
               </p>
             </article>
-            <article
-              class="reveal rounded-[14px] border border-line bg-surface p-5 shadow-card"
-            >
-              <h3 class="text-[1.1rem] font-bold">持続的に働く</h3>
-              <p class="mt-3 text-[0.95rem] text-muted">
+            <article class="border-t-2 border-ink/20 py-7">
+              <h3 class="text-[1.05rem] font-bold">持続的に働く</h3>
+              <p class="mt-2 text-[0.95rem] text-ink/80">
                 時間ではなく期間を重視。短期的な成果だけでなく、長期的に価値を出し続けられるよう、自身やチームにとって無理のない働き方を模索しています。
               </p>
             </article>
@@ -411,40 +251,36 @@
         </div>
       </section>
 
-      <section id="personal" class="bg-[#f8f6f2] py-[84px] max-[720px]:py-16">
-        <div class="mx-auto w-[min(1080px,92vw)]">
-          <div class="reveal mb-[26px] flex flex-col gap-2">
-            <h2
-              class="text-[clamp(1.4rem,3.2vw,2rem)] font-black leading-[1.3]"
+      <!-- Personal -->
+      <section id="personal" class="px-4 py-16">
+        <div class="mx-auto w-[min(640px,92vw)]">
+          <h2 class="text-center">
+            <span
+              class="block font-display text-[clamp(1.9rem,5vw,2.5rem)] font-bold uppercase tracking-[0.08em]"
+              >Personal</span
             >
-              プライベート
-            </h2>
-            <p class="text-[0.94rem] text-muted">
-              趣味や家族との時間など、仕事以外の活動です。
-            </p>
-          </div>
-          <div class="grid grid-cols-3 gap-4 max-[980px]:grid-cols-1">
-            <article
-              class="reveal rounded-[14px] border border-line bg-surface p-5 shadow-card"
-            >
-              <h3 class="text-[1.1rem] font-bold">料理</h3>
-              <p class="mt-3 text-[0.95rem] text-muted">
+            <span class="mt-1 block text-[0.9rem] font-bold">プライベート</span>
+          </h2>
+          <p class="mt-4 text-center text-[0.9rem] text-ink/80">
+            趣味や家族との時間など、仕事以外の活動です。
+          </p>
+
+          <div class="mt-10 flex flex-col">
+            <article class="border-t-2 border-ink/20 py-7">
+              <h3 class="text-[1.05rem] font-bold">料理</h3>
+              <p class="mt-2 text-[0.95rem] text-ink/80">
                 毎日の食事作りを担当しています。プロの動画を参考にしながら作るのが好きで、エンジニアリングと同じく、試行錯誤の積み重ねで少しずつ上達していくのが楽しいです。
               </p>
             </article>
-            <article
-              class="reveal rounded-[14px] border border-line bg-surface p-5 shadow-card"
-            >
-              <h3 class="text-[1.1rem] font-bold">育児</h3>
-              <p class="mt-3 text-[0.95rem] text-muted">
+            <article class="border-t-2 border-ink/20 py-7">
+              <h3 class="text-[1.05rem] font-bold">育児</h3>
+              <p class="mt-2 text-[0.95rem] text-ink/80">
                 2025年に長女が誕生し、育児休業も取得しました。日々の寝かしつけやお風呂など、育児の大変さと楽しさを実感しています。
               </p>
             </article>
-            <article
-              class="reveal rounded-[14px] border border-line bg-surface p-5 shadow-card"
-            >
-              <h3 class="text-[1.1rem] font-bold">水泳</h3>
-              <p class="mt-3 text-[0.95rem] text-muted">
+            <article class="border-t-2 border-ink/20 py-7">
+              <h3 class="text-[1.05rem] font-bold">水泳</h3>
+              <p class="mt-2 text-[0.95rem] text-ink/80">
                 健康のために、昨年から週に1回のペースで続けています。明らかに体調が良くなるので、今後も続けていきたいです。
               </p>
             </article>
@@ -452,128 +288,106 @@
         </div>
       </section>
 
-      <section class="py-[84px] max-[720px]:py-16">
-        <div class="mx-auto w-[min(1080px,92vw)]">
-          <div class="reveal mb-[26px] flex flex-col gap-2">
-            <h2
-              class="text-[clamp(1.4rem,3.2vw,2rem)] font-black leading-[1.3]"
+      <!-- Links -->
+      <section id="links" class="px-4 py-16">
+        <div class="mx-auto w-[min(640px,92vw)]">
+          <h2 class="text-center">
+            <span
+              class="block font-display text-[clamp(1.9rem,5vw,2.5rem)] font-bold uppercase tracking-[0.08em]"
+              >Links</span
             >
-              発信・リンク
-            </h2>
-            <p class="text-[0.94rem] text-muted">
-              開発・技術に関するアウトプットと活動先です。
-            </p>
-          </div>
+            <span class="mt-1 block text-[0.9rem] font-bold">発信・リンク</span>
+          </h2>
+          <p class="mt-4 text-center text-[0.9rem] text-ink/80">
+            開発・技術に関するアウトプットと活動先です。
+          </p>
 
-          <div class="grid grid-cols-3 gap-3 max-[980px]:grid-cols-1">
+          <div class="mt-10 flex flex-col gap-3">
             <a
-              class="reveal block rounded-xl border border-line bg-surface p-4 no-underline shadow-card transition-transform duration-200 hover:-translate-y-[3px]"
+              class="flex items-center justify-between gap-3 rounded-full bg-white px-6 py-3 no-underline hover:bg-ink hover:text-paper"
               href="https://regattanavi.jp/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <strong>レガッタナビ</strong><br />開発・運営中のサービス
+              <span class="text-[0.95rem]"><strong>レガッタナビ</strong> ─ 開発・運営中のサービス</span>
+              <span aria-hidden="true">&rarr;</span>
             </a>
             <a
-              class="reveal block rounded-xl border border-line bg-surface p-4 no-underline shadow-card transition-transform duration-200 hover:-translate-y-[3px]"
+              class="flex items-center justify-between gap-3 rounded-full bg-white px-6 py-3 no-underline hover:bg-ink hover:text-paper"
               href="https://urawa-gurashi.pages.dev/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <strong>浦和ぐらし</strong><br />浦和エリアの生活情報サービス
+              <span class="text-[0.95rem]"><strong>浦和ぐらし</strong> ─ 浦和エリアの生活情報サービス</span>
+              <span aria-hidden="true">&rarr;</span>
             </a>
             <a
-              class="reveal block rounded-xl border border-line bg-surface p-4 no-underline shadow-card transition-transform duration-200 hover:-translate-y-[3px]"
+              class="flex items-center justify-between gap-3 rounded-full bg-white px-6 py-3 no-underline hover:bg-ink hover:text-paper"
               href="https://github.com/byson2562"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <strong>GitHub（個人）</strong><br />byson2562
+              <span class="text-[0.95rem]"><strong>GitHub（個人）</strong> ─ byson2562</span>
+              <span aria-hidden="true">&rarr;</span>
             </a>
             <a
-              class="reveal block rounded-xl border border-line bg-surface p-4 no-underline shadow-card transition-transform duration-200 hover:-translate-y-[3px]"
+              class="flex items-center justify-between gap-3 rounded-full bg-white px-6 py-3 no-underline hover:bg-ink hover:text-paper"
               href="https://github.com/t-nakamura2562"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <strong>GitHub（業務）</strong><br />t-nakamura2562
+              <span class="text-[0.95rem]"><strong>GitHub（業務）</strong> ─ t-nakamura2562</span>
+              <span aria-hidden="true">&rarr;</span>
             </a>
             <a
-              class="reveal block rounded-xl border border-line bg-surface p-4 no-underline shadow-card transition-transform duration-200 hover:-translate-y-[3px]"
+              class="flex items-center justify-between gap-3 rounded-full bg-white px-6 py-3 no-underline hover:bg-ink hover:text-paper"
               href="https://qiita.com/bython"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <strong>Qiita</strong><br />T. Nakamura
+              <span class="text-[0.95rem]"><strong>Qiita</strong> ─ T. Nakamura</span>
+              <span aria-hidden="true">&rarr;</span>
             </a>
             <a
-              class="reveal block rounded-xl border border-line bg-surface p-4 no-underline shadow-card transition-transform duration-200 hover:-translate-y-[3px]"
+              class="flex items-center justify-between gap-3 rounded-full bg-white px-6 py-3 no-underline hover:bg-ink hover:text-paper"
               href="https://www.wantedly.com/companies/codecamp/post_articles/451087"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <strong>Interview</strong><br />CodeCamp記事
+              <span class="text-[0.95rem]"><strong>Interview</strong> ─ CodeCamp記事</span>
+              <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
         </div>
       </section>
 
-      <section
-        id="contact"
-        class="bg-[#f8f6f2] py-[84px] text-center max-[720px]:py-16"
-      >
-        <div class="mx-auto w-[min(1080px,92vw)]">
-          <div
-            class="reveal rounded-[18px] border border-line bg-surface p-7 shadow-soft"
-          >
-            <p
-              class="font-display text-[0.82rem] font-bold uppercase tracking-[0.1em] text-accent"
+      <!-- Contact -->
+      <section id="contact" class="mt-16 bg-ink px-4 pb-10 pt-20 text-paper">
+        <div class="mx-auto w-[min(640px,92vw)] text-center">
+          <h2>
+            <span
+              class="block font-display text-[clamp(1.9rem,5vw,2.5rem)] font-bold uppercase tracking-[0.08em]"
+              >Contact</span
             >
-              Contact
-            </p>
-            <h2
-              class="text-[clamp(1.4rem,3.2vw,2rem)] font-black leading-[1.3]"
+            <span class="mt-1 block text-[0.9rem] font-bold">お問い合わせ</span>
+          </h2>
+          <p class="mt-5 text-[0.95rem] text-paper/90">
+            ご連絡はメールにてお気軽にどうぞ。<br />
+            返信は2営業日以内を目安にしています。
+          </p>
+          <div class="mt-8 flex justify-center">
+            <a
+              class="flex items-center gap-3 rounded-full bg-paper px-6 py-3 font-display text-[0.9rem] font-semibold text-ink no-underline hover:bg-white"
+              href="mailto:takumi.nakamura.by@gmail.com"
+              >takumi.nakamura.by@gmail.com <span aria-hidden="true">&rarr;</span></a
             >
-              お問い合わせ
-            </h2>
-            <p class="mx-auto mt-3 max-w-[50ch] text-muted">
-              ご連絡はメールにてお気軽にどうぞ。<br />
-              返信は2営業日以内を目安にしています。
-            </p>
-            <div class="mt-7 flex justify-center">
-              <a
-                class="inline-block rounded-full border border-accent bg-accent px-[18px] py-2.5 text-[0.92rem] font-bold text-white no-underline transition-transform duration-200 hover:-translate-y-0.5"
-                href="mailto:takumi.nakamura.by@gmail.com"
-                >takumi.nakamura.by@gmail.com</a
-              >
-            </div>
           </div>
+
+          <p class="mt-16 text-[0.8rem] text-paper/70">
+            Copyright &copy; Takumi Nakamura
+          </p>
         </div>
       </section>
     </main>
-
-    <footer class="pb-10 pt-6 text-center text-[0.9rem] text-muted">
-      <div class="mx-auto w-[min(1080px,92vw)]">
-        Copyright &copy; Takumi Nakamura
-      </div>
-    </footer>
-
-    <script>
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.15 },
-      );
-
-      document.querySelectorAll(".reveal").forEach((element) => {
-        observer.observe(element);
-      });
-    </script>
   </body>
 </html>
